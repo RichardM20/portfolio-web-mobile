@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/views/widgets/theme/theme_app.dart';
 
 class NameTextContent extends StatelessWidget {
   const NameTextContent({super.key});
@@ -6,12 +7,12 @@ class NameTextContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
-      text: const TextSpan(
+      text: TextSpan(
         children: [
           TextSpan(
             text: "Hi there,\n",
             style: TextStyle(
-              fontFamily: "JosefinSans-Regular",
+              fontFamily: FontStyles.lightStyle,
               fontSize: 50,
             ),
           ),
@@ -19,23 +20,25 @@ class NameTextContent extends StatelessWidget {
             text: "I'm ",
             style: TextStyle(
               height: 1.2,
-              fontFamily: "JosefinSans-Regular",
+              fontFamily: FontStyles.lightStyle,
               fontSize: 50,
             ),
           ),
           TextSpan(
             text: "Richard ",
             style: TextStyle(
-                fontSize: 50,
-                fontFamily: "JosefinSans-Medium",
-                color: Colors.blue),
+              fontSize: 50,
+              fontFamily: FontStyles.regularStyle,
+              color: const Color.fromARGB(255, 9, 73, 122),
+            ),
           ),
           TextSpan(
             text: "Morales",
             style: TextStyle(
-                fontSize: 50,
-                fontFamily: "JosefinSans-Medium",
-                color: Colors.blue),
+              fontSize: 50,
+              fontFamily: FontStyles.regularStyle,
+              color: const Color.fromARGB(255, 9, 73, 122),
+            ),
           ),
         ],
       ),

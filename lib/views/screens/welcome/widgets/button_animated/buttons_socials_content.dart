@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:personal_portfolio/controllers/button_animation_controller.dart';
-import 'package:personal_portfolio/views/screens/welcome/widgets/buttons/socials/icon_social_content.dart';
-import 'package:personal_portfolio/views/screens/welcome/widgets/buttons/socials/text_button_content.dart';
+
+import 'icon_social_content.dart';
+import 'text_button_content.dart';
 
 class SocialsButtons extends StatefulWidget {
   const SocialsButtons(
@@ -53,14 +54,16 @@ class _SocialsButtonsState extends State<SocialsButtons>
                 : const Color.fromARGB(255, 79, 76, 76),
             borderRadius: BorderRadius.circular(50),
           ),
-          padding: widget.isHover == true
-              ? const EdgeInsets.symmetric(horizontal: 20, vertical: 10)
+          padding: MediaQuery.of(context).size.width > 900
+              ? widget.isHover == true
+                  ? const EdgeInsets.symmetric(horizontal: 20, vertical: 10)
+                  : EdgeInsets.zero
               : EdgeInsets.zero,
           height: 70,
           width: widget.isHover.value
-              ? widget.text!.length > 14
-                  ? 250
-                  : 200
+              ? widget.text!.length > 15
+                  ? Get.width * 0.17
+                  : Get.width * 0.14
               : 70,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -68,12 +71,18 @@ class _SocialsButtonsState extends State<SocialsButtons>
             children: [
               SocialIconContent(
                 iconName: widget.iconName,
+                animationController: controller.animationController,
+                onHover: widget.isHover,
               ),
               if (widget.isHover.value)
                 const SizedBox(
                   width: 8,
                 ),
-              if (widget.isHover.value) TextButtonContent(text: widget.text!)
+              MediaQuery.of(context).size.width > 900
+                  ? widget.isHover.value == true
+                      ? TextButtonContent(text: widget.text!)
+                      : Container()
+                  : Container(),
             ],
           ),
         ),

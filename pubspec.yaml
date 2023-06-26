@@ -77,24 +77,16 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: JosefinSans-Bold
+    - family: RobotoCondensed-Bold
       fonts:
-        - asset: assets/fonts/JosefinSans-Bold.ttf
-    - family: JosefinSans-SemiBold
+        - asset: assets/fonts/RobotoCondensed-Bold.ttf
+    - family: RobotoCondensed-Light
       fonts:
-        - asset: assets/fonts/JosefinSans-SemiBold.ttf
-    - family: JosefinSans-Light
+        - asset: assets/fonts/RobotoCondensed-Light.ttf
+    - family: RobotoCondensed-Regular
       fonts:
-        - asset: assets/fonts/JosefinSans-Light.ttf
-    - family: JosefinSans-Medium
-      fonts:
-        - asset: assets/fonts/JosefinSans-Medium.ttf  
-    - family: JosefinSans-Regular
-      fonts:
-        - asset: assets/fonts/JosefinSans-Regular.ttf  
-    - family: JosefinSans-Thin
-      fonts:
-        - asset: assets/fonts/JosefinSans-Thin.ttf      
+        - asset: assets/fonts/RobotoCondensed-Regular.ttf  
+ 
  
   #
   # For details regarding fonts from package dependencies,

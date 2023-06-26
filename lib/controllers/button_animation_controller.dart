@@ -9,6 +9,12 @@ class ButtonsAnimationController extends GetxController {
   late AnimationController animationController;
   List icons = [
     {
+      'icon': 'download-icon.svg',
+      'isHover': false.obs,
+      'text': "Download CV",
+      'color': const Color.fromARGB(255, 9, 73, 122),
+    },
+    {
       'icon': 'github-icon.svg',
       'isHover': false.obs,
       'text': "View to Github",

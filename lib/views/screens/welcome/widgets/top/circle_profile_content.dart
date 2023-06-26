@@ -6,10 +6,10 @@ class CircleProfileImageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: 200,
+      height: 350,
+      width: 350,
       decoration: const BoxDecoration(
-        color: Colors.blue,
+        color: Color.fromARGB(255, 9, 73, 122),
         shape: BoxShape.circle,
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/controllers/button_animation_controller.dart';
-import 'package:personal_portfolio/views/screens/welcome/widgets/buttons/socials/buttons_socials_content.dart';
+import 'package:personal_portfolio/views/screens/welcome/widgets/button_animated/buttons_socials_content.dart';
 
 class SocialsIconsContent extends StatelessWidget {
   SocialsIconsContent({super.key});

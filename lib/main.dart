@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 import 'package:personal_portfolio/controllers/button_animation_controller.dart';
-import 'package:personal_portfolio/views/screens/welcome/welcome.dart';
+import 'package:personal_portfolio/views/screens/index.dart';
 
 void main() {
   Get.put(ButtonsAnimationController());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Portfolio',
-      home: HomeScreen(),
+      home: Index(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/views/widgets/theme/theme_app.dart';
 
 class TextButtonContent extends StatelessWidget {
   const TextButtonContent({super.key, required this.text});
@@ -9,9 +10,10 @@ class TextButtonContent extends StatelessWidget {
       child: Text(
         text,
         overflow: TextOverflow.ellipsis,
-        style: const TextStyle(
+        style: TextStyle(
           color: Colors.white,
-          fontFamily: "JosefinSans-Bold",
+          fontFamily: FontStyles.boldStyle,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
