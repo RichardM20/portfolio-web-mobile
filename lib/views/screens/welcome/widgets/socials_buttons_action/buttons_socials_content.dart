@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:personal_portfolio/controllers/button_animation_controller.dart';
+import 'package:personal_portfolio/controllers/socials_buttons_action_controller.dart';
 
 import 'icon_social_content.dart';
 import 'text_button_content.dart';
@@ -22,7 +22,7 @@ class SocialsButtons extends StatefulWidget {
 
 class _SocialsButtonsState extends State<SocialsButtons>
     with SingleTickerProviderStateMixin {
-  final controller = ButtonsAnimationController.to;
+  final controller = SocialsButtonsActionController.to;
   @override
   void initState() {
     super.initState();
@@ -49,11 +49,19 @@ class _SocialsButtonsState extends State<SocialsButtons>
           margin: const EdgeInsets.only(right: 10),
           duration: const Duration(milliseconds: 250),
           decoration: BoxDecoration(
-            color: widget.isHover.value == true
-                ? widget.background
-                : const Color.fromARGB(255, 79, 76, 76),
-            borderRadius: BorderRadius.circular(50),
-          ),
+              color: widget.isHover.value == true
+                  ? widget.background
+                  : const Color.fromARGB(255, 9, 73, 122),
+              borderRadius: BorderRadius.circular(50),
+              boxShadow: widget.isHover.value == false
+                  ? []
+                  : const [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 50,
+                        offset: Offset(0.0, 10),
+                      )
+                    ]),
           padding: MediaQuery.of(context).size.width > 900
               ? widget.isHover == true
                   ? const EdgeInsets.symmetric(horizontal: 20, vertical: 10)
@@ -61,9 +69,11 @@ class _SocialsButtonsState extends State<SocialsButtons>
               : EdgeInsets.zero,
           height: 70,
           width: widget.isHover.value
-              ? widget.text!.length > 15
-                  ? Get.width * 0.17
-                  : Get.width * 0.14
+              ? widget.text!.length > 16
+                  ? 230
+                  : widget.text!.length >= 14 && widget.text!.length <= 16
+                      ? 200
+                      : 160
               : 70,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,

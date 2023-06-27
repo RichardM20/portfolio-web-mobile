@@ -1,9 +1,10 @@
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ButtonsAnimationController extends GetxController {
-  static ButtonsAnimationController get to =>
-      Get.find<ButtonsAnimationController>();
+class SocialsButtonsActionController extends GetxController {
+  static SocialsButtonsActionController get to =>
+      Get.find<SocialsButtonsActionController>();
 
   RxBool onHover = false.obs;
   late AnimationController animationController;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/views/screens/welcome/widgets/top/circle_profile_content.dart';
+import 'package:personal_portfolio/views/screens/welcome/widgets/about_me/circle_profile_content.dart';
 import 'package:personal_portfolio/views/widgets/theme/theme_app.dart';
 
 class ExperienceContent extends StatelessWidget {

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:personal_portfolio/views/screens/welcome/widgets/socials_icon_list_content.dart';
-import 'package:personal_portfolio/views/screens/welcome/widgets/top/about_me.dart';
-import 'package:personal_portfolio/views/screens/welcome/widgets/top/name_text_content.dart';
-import 'package:personal_portfolio/views/screens/welcome/widgets/top/profession_text_content.dart';
+import 'package:personal_portfolio/views/screens/welcome/widgets/about_me/about_me.dart';
+import 'package:personal_portfolio/views/screens/welcome/widgets/about_me/name_text_content.dart';
+import 'package:personal_portfolio/views/screens/welcome/widgets/about_me/profession_text_content.dart';
 
 import 'experience_content.dart';
 
@@ -14,7 +14,8 @@ class PresentationTopContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print(Get.width);
-    return SizedBox(
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 50),
       width: Get.width,
       child: MediaQuery.of(context).size.width > 900
           ? Row(
@@ -31,7 +32,9 @@ class PresentationTopContent extends StatelessWidget {
                       const ProfessionTextContent(),
                       const SizedBox(height: 10),
                       const AboutMeContent(),
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 20),
+                      const Divider(),
+                      const SizedBox(height: 5),
                       SocialsIconsContent(),
                     ],
                   ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/top/presentation_content.dart';
+import 'widgets/about_me/presentation_content.dart';
 
 class WelcomeContent extends StatelessWidget {
   const WelcomeContent({super.key});

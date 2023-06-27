@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
-import 'package:personal_portfolio/controllers/button_animation_controller.dart';
+import 'package:personal_portfolio/controllers/socials_buttons_action_controller.dart';
+import 'package:personal_portfolio/controllers/navbar_controller.dart';
 import 'package:personal_portfolio/views/screens/index.dart';
 
 void main() {
-  Get.put(ButtonsAnimationController());
+  //inicializacion del controlador
+  Get.put(SocialsButtonsActionController());
+  Get.put(NavbarController());
   runApp(const MyApp());
 }
 

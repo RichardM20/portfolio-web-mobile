@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:personal_portfolio/views/screens/contactme/contact_me_screen.dart';
 
 import 'repositories/repositories_screen.dart';
 import 'welcome/widgets/navbar/navbar_content.dart';
@@ -17,7 +18,7 @@ class Index extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: Get.width * 0.1),
         child: Column(
           children: [
-            const NavBarContent(),
+            NavBarContent(),
             Expanded(
               child: SizedBox(
                 height: Get.height * 0.8,
@@ -26,6 +27,7 @@ class Index extends StatelessWidget {
                   children: const [
                     WelcomeContent(),
                     RepositoriesContent(),
+                    ContactmeContent()
                   ],
                 ),
               ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/controllers/button_animation_controller.dart';
-import 'package:personal_portfolio/views/screens/welcome/widgets/button_animated/buttons_socials_content.dart';
+import 'package:personal_portfolio/controllers/socials_buttons_action_controller.dart';
+import 'package:personal_portfolio/views/screens/welcome/widgets/socials_buttons_action/buttons_socials_content.dart';
 
 class SocialsIconsContent extends StatelessWidget {
   SocialsIconsContent({super.key});
-  final _controller = ButtonsAnimationController.to;
+  final _controller = SocialsButtonsActionController.to;
   @override
   Widget build(BuildContext context) {
     return Row(

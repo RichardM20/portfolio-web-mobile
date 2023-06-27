@@ -7,7 +7,8 @@ class FontStyles {
   static String regularStyle = "RobotoCondensed-Regular";
   static String lightStyle = "RobotoCondensed-Light";
 
-  static int titleSize = 50;
-  static int subtitleSize = 35;
-  static int paragraphSize = 20;
+  static double titleSize = 50;
+  static double subtitleSize = 35;
+  static double paragraphSize = 20;
+  static double navbarTextActionSize = 18;
 }
