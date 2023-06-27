@@ -6,7 +6,7 @@ import 'package:personal_portfolio/views/screens/welcome/widgets/about_me/about_
 import 'package:personal_portfolio/views/screens/welcome/widgets/about_me/name_text_content.dart';
 import 'package:personal_portfolio/views/screens/welcome/widgets/about_me/profession_text_content.dart';
 
-import 'experience_content.dart';
+import 'profile_and_experience.dart';
 
 class PresentationTopContent extends StatelessWidget {
   const PresentationTopContent({super.key});
@@ -17,7 +17,7 @@ class PresentationTopContent extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 50),
       width: Get.width,
-      child: MediaQuery.of(context).size.width > 900
+      child: MediaQuery.of(context).size.width > 1400
           ? Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,8 +39,8 @@ class PresentationTopContent extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Flexible(
-                  child: ExperienceContent(),
+                Flexible(
+                  child: ProfileAndExperienceSkillContent(),
                 )
               ],
             )
@@ -48,8 +48,8 @@ class PresentationTopContent extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Flexible(
-                  child: ExperienceContent(),
+                Flexible(
+                  child: ProfileAndExperienceSkillContent(),
                 ),
                 Expanded(
                   child: Column(
