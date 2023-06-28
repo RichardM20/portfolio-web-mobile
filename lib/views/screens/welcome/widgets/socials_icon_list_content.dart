@@ -15,6 +15,7 @@ class SocialsIconsContent extends StatelessWidget {
           iconName: _controller.icons[index]['icon'],
           text: _controller.icons[index]['text'],
           background: _controller.icons[index]['color'],
+          url: _controller.icons[index]['url'],
         ),
       ),
     );

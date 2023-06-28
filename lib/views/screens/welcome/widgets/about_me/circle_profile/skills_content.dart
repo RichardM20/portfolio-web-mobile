@@ -23,7 +23,8 @@ class CircleSkillsContent extends StatelessWidget {
             child: Stack(
               children: [
                 const Positioned(
-                  left: 0,
+                  left: 20,
+                  top: 20,
                   child: SkillDecoration(
                     skillName: 'Firebase',
                     backgroundColor: Colors.amber,
@@ -31,7 +32,7 @@ class CircleSkillsContent extends StatelessWidget {
                 ),
                 const Positioned(
                   right: 50,
-                  bottom: 100,
+                  bottom: 10,
                   child: SkillDecoration(
                     skillName: 'Bloc',
                     backgroundColor: Colors.blue,
@@ -46,40 +47,40 @@ class CircleSkillsContent extends StatelessWidget {
                   ),
                 ),
                 const Positioned(
-                  left: 120,
-                  top: 40,
+                  right: 20,
+                  bottom: 50,
                   child: SkillDecoration(
                     skillName: 'Riverpod',
                     backgroundColor: Colors.blue,
                   ),
                 ),
                 Positioned(
-                  left: 40,
-                  top: 130,
+                  left: 20,
+                  bottom: 30,
                   child: SkillDecoration(
                     skillName: 'GraphQL',
                     backgroundColor: Colors.pink[700]!,
                   ),
                 ),
                 const Positioned(
-                  left: 200,
-                  top: 120,
+                  left: 80,
+                  top: 75,
                   child: SkillDecoration(
                     skillName: 'GitHub',
                     backgroundColor: Colors.black,
                   ),
                 ),
                 const Positioned(
-                  right: 60,
-                  bottom: 40,
+                  left: 60,
+                  bottom: 50,
                   child: SkillDecoration(
                     skillName: 'Git',
                     backgroundColor: Colors.black,
                   ),
                 ),
                 const Positioned(
-                  left: 100,
-                  bottom: 90,
+                  left: 20,
+                  top: 70,
                   child: SkillDecoration(
                     skillName: 'GitLab',
                     backgroundColor: Colors.deepOrange,

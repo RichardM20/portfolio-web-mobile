@@ -14,8 +14,6 @@ class CircleDecoration extends StatelessWidget {
     return Obx(
       () => AnimatedContainer(
         duration: const Duration(milliseconds: 500),
-        height: 350,
-        width: 350,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -33,8 +31,8 @@ class CircleDecoration extends StatelessWidget {
           boxShadow: const [
             BoxShadow(
               color: Colors.black26,
-              blurRadius: 12,
-              offset: Offset(10, 0.0),
+              blurRadius: 8,
+              offset: Offset(2, 0.0),
             )
           ],
           shape: BoxShape.circle,

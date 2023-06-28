@@ -4,18 +4,22 @@ import 'package:personal_portfolio/controllers/socials_buttons_action_controller
 
 import 'icon_social_content.dart';
 import 'text_button_content.dart';
+import 'dart:html' as html;
 
 class SocialsButtons extends StatefulWidget {
-  const SocialsButtons(
-      {super.key,
-      this.text,
-      required this.iconName,
-      required this.isHover,
-      required this.background});
+  const SocialsButtons({
+    super.key,
+    this.text,
+    required this.iconName,
+    required this.isHover,
+    required this.background,
+    required this.url,
+  });
   final String? text;
   final String iconName;
   final RxBool isHover;
   final Color background;
+  final String url;
   @override
   State<SocialsButtons> createState() => _SocialsButtonsState();
 }
@@ -45,55 +49,46 @@ class _SocialsButtonsState extends State<SocialsButtons>
           widget.isHover.value = false;
           controller.animationController.forward(from: 0.5);
         },
-        child: AnimatedContainer(
-          margin: const EdgeInsets.only(right: 10),
-          duration: const Duration(milliseconds: 250),
-          decoration: BoxDecoration(
-              color: widget.isHover.value == true
-                  ? widget.background
-                  : const Color.fromARGB(255, 9, 73, 122),
-              borderRadius: BorderRadius.circular(50),
-              boxShadow: widget.isHover.value == false
-                  ? []
-                  : const [
-                      BoxShadow(
-                        color: Colors.black26,
-                        blurRadius: 50,
-                        offset: Offset(0.0, 10),
-                      )
-                    ]),
-          padding: MediaQuery.of(context).size.width > 900
-              ? widget.isHover == true
-                  ? const EdgeInsets.symmetric(horizontal: 20, vertical: 10)
-                  : EdgeInsets.zero
-              : EdgeInsets.zero,
-          height: 70,
-          width: widget.isHover.value
-              ? widget.text!.length > 16
-                  ? 230
-                  : widget.text!.length >= 14 && widget.text!.length <= 16
-                      ? 200
-                      : 160
-              : 70,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SocialIconContent(
-                iconName: widget.iconName,
-                animationController: controller.animationController,
-                onHover: widget.isHover,
-              ),
-              if (widget.isHover.value)
-                const SizedBox(
-                  width: 8,
-                ),
-              MediaQuery.of(context).size.width > 900
-                  ? widget.isHover.value == true
+        child: GestureDetector(
+          onTap: () => html.window.open(widget.url, '_blank'),
+          child: AnimatedContainer(
+            margin: const EdgeInsets.only(right: 10),
+            duration: const Duration(milliseconds: 250),
+            decoration: BoxDecoration(
+                color: widget.isHover.value == true
+                    ? widget.background
+                    : const Color.fromARGB(255, 9, 73, 122),
+                borderRadius: BorderRadius.circular(50),
+                boxShadow: widget.isHover.value == false
+                    ? []
+                    : const [
+                        BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 50,
+                          offset: Offset(0.0, 10),
+                        )
+                      ]),
+            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            height: 35,
+            width: widget.isHover.value ? 100 : 35,
+            child: Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: SocialIconContent(
+                      iconName: widget.iconName,
+                      animationController: controller.animationController,
+                      onHover: widget.isHover,
+                    ),
+                  ),
+                  widget.isHover.value == true
                       ? TextButtonContent(text: widget.text!)
                       : Container()
-                  : Container(),
-            ],
+                ],
+              ),
+            ),
           ),
         ),
       ),

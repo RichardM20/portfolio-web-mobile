@@ -20,7 +20,7 @@ class NavBarContent extends StatelessWidget {
             "Rick Developer",
             style: TextStyle(
               fontFamily: FontStyles.boldStyle,
-              fontSize: FontStyles.navbarTextActionSize.value,
+              fontSize: 10,
               color: const Color.fromARGB(255, 9, 73, 122),
             ),
           ),

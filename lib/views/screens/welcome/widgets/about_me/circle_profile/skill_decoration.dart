@@ -14,7 +14,7 @@ class SkillDecoration extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: backgroundColor,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(3),
         boxShadow: const [
           BoxShadow(
             color: Colors.black12,
@@ -24,15 +24,15 @@ class SkillDecoration extends StatelessWidget {
         ],
       ),
       padding: const EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 10,
+        horizontal: 5,
+        vertical: 2,
       ),
       child: Text(
         skillName,
         style: TextStyle(
           color: Colors.white,
           fontFamily: FontStyles.regularStyle,
-          fontSize: FontStyles.paragraphSize.value,
+          fontSize: 8,
         ),
       ),
     );

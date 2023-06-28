@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/utils/typography.dart';
 import 'package:personal_portfolio/views/widgets/theme/theme_app.dart';
 
 class NameTextContent extends StatelessWidget {
@@ -7,38 +8,23 @@ class NameTextContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
-      text: TextSpan(
+      text: const TextSpan(
         children: [
           TextSpan(
             text: "Hi there,\n",
-            style: TextStyle(
-              fontFamily: FontStyles.lightStyle,
-              fontSize: 50,
-            ),
+            style: headlineTextStyle,
           ),
           TextSpan(
             text: "I'm ",
-            style: TextStyle(
-              height: 1.2,
-              fontFamily: FontStyles.lightStyle,
-              fontSize: 50,
-            ),
+            style: headlineTextStyle,
           ),
           TextSpan(
             text: "Richard ",
-            style: TextStyle(
-              fontSize: 50,
-              fontFamily: FontStyles.regularStyle,
-              color: const Color.fromARGB(255, 9, 73, 122),
-            ),
+            style: headlineSecondaryTextStyle,
           ),
           TextSpan(
             text: "Morales",
-            style: TextStyle(
-              fontSize: 50,
-              fontFamily: FontStyles.regularStyle,
-              color: const Color.fromARGB(255, 9, 73, 122),
-            ),
+            style: headlineSecondaryTextStyle,
           ),
         ],
       ),

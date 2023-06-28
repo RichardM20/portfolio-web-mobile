@@ -15,8 +15,8 @@ class ActionDecorationContent extends StatelessWidget {
       () => AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         padding: const EdgeInsets.symmetric(
-          horizontal: 15,
-          vertical: 10,
+          horizontal: 10,
+          vertical: 8,
         ),
         margin: const EdgeInsets.only(
           left: 10,
@@ -30,7 +30,7 @@ class ActionDecorationContent extends StatelessWidget {
           color: isHover.value
               ? const Color.fromARGB(255, 9, 73, 122).withOpacity(0.3)
               : Colors.transparent,
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(4),
         ),
         child: widget,
       ),

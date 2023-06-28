@@ -6,12 +6,12 @@ class TextButtonContent extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Flexible(
       child: Text(
         text,
-        overflow: TextOverflow.ellipsis,
         style: TextStyle(
           color: Colors.white,
+          fontSize: 4.5,
           fontFamily: FontStyles.boldStyle,
           fontWeight: FontWeight.bold,
         ),

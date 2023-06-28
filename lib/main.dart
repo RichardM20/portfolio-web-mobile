@@ -5,6 +5,7 @@ import 'package:personal_portfolio/controllers/profile_and_experience_controller
 import 'package:personal_portfolio/controllers/socials_buttons_action_controller.dart';
 import 'package:personal_portfolio/controllers/navbar_controller.dart';
 import 'package:personal_portfolio/views/screens/index.dart';
+import 'package:responsive_framework/responsive_wrapper.dart';
 
 void main() {
   //inicializacion del controlador
@@ -21,12 +22,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Portfolio',
-      home: LayoutBuilder(builder: (context, constraints) {
-        ResponsiveController.to.updateFontSize(constraints.maxWidth);
-        return const Index();
-      }),
+      builder: (context, child) => ResponsiveWrapper.builder(
+        child,
+        maxWidth: 1900,
+        minWidth: 480,
+        defaultScale: true,
+        defaultScaleFactor: 1.0,
+        breakpoints: [
+          const ResponsiveBreakpoint.resize(480, name: MOBILE),
+          const ResponsiveBreakpoint.autoScale(800, name: TABLET),
+          const ResponsiveBreakpoint.resize(1900, name: DESKTOP),
+          const ResponsiveBreakpoint.autoScale(2460, name: '4K'),
+        ],
+      ),
+      home: const Index(),
     );
   }
 }

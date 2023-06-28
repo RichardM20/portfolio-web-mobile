@@ -14,7 +14,7 @@ class ActionButtonText extends StatelessWidget {
         name,
         style: TextStyle(
           fontFamily: FontStyles.boldStyle,
-          fontSize: FontStyles.navbarTextActionSize.value,
+          fontSize: 10,
           color: isHover.value
               ? Colors.white
               : const Color.fromARGB(255, 9, 73, 122),

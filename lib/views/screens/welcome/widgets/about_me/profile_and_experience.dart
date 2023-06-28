@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/controllers/profile_and_experience_controller.dart';
 import 'package:personal_portfolio/views/screens/welcome/widgets/about_me/experience/experience_content.dart';
@@ -11,8 +10,8 @@ class ProfileAndExperienceSkillContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 400,
-      width: 400,
+      height: 170,
+      width: 170,
       child: MouseRegion(
         onEnter: (event) {
           _controller.isHover.value = true;
@@ -27,8 +26,8 @@ class ProfileAndExperienceSkillContent extends StatelessWidget {
               child: CircleProfileAndSkillsContent(),
             ),
             Positioned(
-              bottom: 130,
-              left: -50,
+              bottom: 50,
+              left: -18,
               child: ExperienceAndSkillContent(),
             ),
           ],

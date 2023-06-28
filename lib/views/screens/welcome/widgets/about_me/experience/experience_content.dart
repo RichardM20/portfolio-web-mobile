@@ -10,21 +10,20 @@ class ExperienceAndSkillContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => Container(
-        height: 69,
-        width: 130,
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        height: 25,
+        width: 60,
+        padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 5),
         decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 9, 38, 60),
-            borderRadius: BorderRadius.circular(
-              8,
-            ),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black26,
-                blurRadius: 12,
-                offset: Offset(0.0, 6),
-              )
-            ]),
+          color: const Color.fromARGB(255, 9, 38, 60),
+          borderRadius: BorderRadius.circular(3),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black26,
+              blurRadius: 8,
+              offset: Offset(0.0, 2),
+            )
+          ],
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -36,6 +35,7 @@ class ExperienceAndSkillContent extends StatelessWidget {
               textAlign: TextAlign.left,
               style: TextStyle(
                 fontFamily: FontStyles.boldStyle,
+                fontSize: 6,
                 color: Colors.white,
               ),
             ),

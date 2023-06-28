@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/views/widgets/block_wrapper.dart';
 
 import 'widgets/about_me/presentation_content.dart';
 
@@ -7,6 +8,6 @@ class WelcomeContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const PresentationTopContent();
+    return const BlockWrapper(PresentationTopContent());
   }
 }

@@ -3,11 +3,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class SocialIconContent extends StatelessWidget {
-  const SocialIconContent(
-      {super.key,
-      required this.iconName,
-      required this.animationController,
-      required this.onHover});
+  const SocialIconContent({
+    super.key,
+    required this.iconName,
+    required this.animationController,
+    required this.onHover,
+  });
   final String iconName;
   final AnimationController animationController;
   final RxBool onHover;
@@ -18,6 +19,7 @@ class SocialIconContent extends StatelessWidget {
           .animate(animationController),
       child: SvgPicture.asset(
         'assets/icons/$iconName',
+        width: 30,
         color: Colors.white,
       ),
     );
