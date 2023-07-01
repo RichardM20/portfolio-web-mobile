@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
-import 'package:personal_portfolio/controllers/font_controller.dart';
 import 'package:personal_portfolio/controllers/profile_and_experience_controller.dart';
 import 'package:personal_portfolio/controllers/socials_buttons_action_controller.dart';
 import 'package:personal_portfolio/controllers/navbar_controller.dart';
@@ -9,10 +8,11 @@ import 'package:responsive_framework/responsive_wrapper.dart';
 
 void main() {
   //inicializacion del controlador
+
   Get.put(SocialsButtonsActionController());
   Get.put(NavbarController());
   Get.put(ProfileAndExperienceSkillsController());
-  Get.put(ResponsiveController());
+
   runApp(const MyApp());
 }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ContactmeContent extends StatelessWidget {
-  const ContactmeContent({super.key});
+class TestimonialsContent extends StatelessWidget {
+  const TestimonialsContent({super.key});
 
   @override
   Widget build(BuildContext context) {

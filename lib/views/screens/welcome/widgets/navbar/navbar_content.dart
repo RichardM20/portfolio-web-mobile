@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/controllers/navbar_controller.dart';
+import 'package:personal_portfolio/utils/list_action_navbar.dart';
 import 'package:personal_portfolio/views/widgets/theme/theme_app.dart';
 
 import 'actions/action_button.dart';
@@ -26,11 +27,15 @@ class NavBarContent extends StatelessWidget {
           ),
           Row(
             children: List.generate(
-              _contrller.utils.navbarActionsList.length,
+              navbarActionsList.length,
               (index) => ActionButton(
-                isHover: _contrller.utils.navbarActionsList[index]['isHover'],
-                name: _contrller.utils.navbarActionsList[index]['name'],
-                onTap: _contrller.utils.navbarActionsList[index]['onTap'],
+                isHover: navbarActionsList[index]['isHover'],
+                name: navbarActionsList[index]['name'],
+                onTap: () => _contrller.pageController.animateToPage(
+                  index,
+                  duration: const Duration(milliseconds: 250),
+                  curve: Curves.easeIn,
+                ),
               ),
             ),
           )

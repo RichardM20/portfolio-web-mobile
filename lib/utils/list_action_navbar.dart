@@ -1,21 +1,20 @@
 import 'package:get/get.dart';
 
-class NavbarUtils {
-  List navbarActionsList = [
-    {
-      'name': 'Home',
-      'isHover': false.obs,
-      'onTap': () {},
-    },
-    {
-      'name': 'Projects',
-      'isHover': false.obs,
-      'onTap': () {},
-    },
-    {
-      'name': 'Contact me',
-      'isHover': false.obs,
-      'onTap': () {},
-    },
-  ];
-}
+List navbarActionsList = [
+  {
+    'name': 'Home',
+    'isHover': false.obs,
+  },
+  {
+    'name': 'Projects',
+    'isHover': false.obs,
+  },
+  {
+    'name': 'Testimonials',
+    'isHover': false.obs,
+  },
+  {
+    'name': 'About me',
+    'isHover': false.obs,
+  },
+];

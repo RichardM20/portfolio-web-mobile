@@ -11,7 +11,7 @@ class TextButtonContent extends StatelessWidget {
         text,
         style: TextStyle(
           color: Colors.white,
-          fontSize: 4.5,
+          fontSize: 7,
           fontFamily: FontStyles.boldStyle,
           fontWeight: FontWeight.bold,
         ),
