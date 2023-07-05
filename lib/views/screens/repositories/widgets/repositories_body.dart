@@ -1,19 +1,21 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:personal_portfolio/controllers/projects_controller.dart';
 import 'package:personal_portfolio/utils/typography.dart';
+import 'package:personal_portfolio/views/screens/repositories/widgets/carousel/button_next_page.dart';
+import 'package:personal_portfolio/views/screens/repositories/widgets/carousel/button_previus_page.dart';
 
 import 'buttons_content.dart';
-import 'imgage_content.dart';
-import 'info_project_content.dart';
-import 'project_content_decoration.dart';
+import 'project_decoration_content.dart';
+import 'project_imgage_content.dart';
+import 'project_info_content.dart';
 
 class RepositoriesBody extends StatelessWidget {
   RepositoriesBody({super.key});
   final _contrller = ProjectsController.to;
   @override
   Widget build(BuildContext context) {
-    print("map : ${_contrller.projectsList[0].storesLinks}");
     return SizedBox(
       width: double.infinity,
       height: double.infinity,
@@ -24,15 +26,23 @@ class RepositoriesBody extends StatelessWidget {
             style: mediumSecondaryTextStyle,
           ),
           Expanded(
-            child: Wrap(
-              alignment: WrapAlignment.start,
-              children: List.generate(
-                _contrller.projectsList.length,
-                (index) => ProjectContentDecoration(
-                  indexSelected: index.obs,
-                  widget: Stack(
-                    children: [
-                      Column(
+            child: Stack(
+              children: [
+                CarouselSlider(
+                  options: CarouselOptions(
+                    height: 200,
+                    viewportFraction: Get.width < 600 ? 0.6 : 0.32,
+                    autoPlay: false,
+                    padEnds: true,
+                    reverse: false,
+                    pageSnapping: true,
+                    scrollDirection: Axis.horizontal,
+                  ),
+                  carouselController: _contrller.carouselController,
+                  items: List.generate(
+                    _contrller.projectsList.length,
+                    (index) => ProjectContentDecoration(
+                      widget: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           ProjectImagecontent(
@@ -45,30 +55,25 @@ class RepositoriesBody extends StatelessWidget {
                             technologies:
                                 _contrller.projectsList[index].technologies!,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              ActionButtonProject(
-                                isHover: false.obs,
-                                textButton: 'View code',
-                                onTap: () {},
-                              ),
-                              const SizedBox(
-                                width: 5,
-                              ),
-                              ActionButtonProject(
-                                isHover: false.obs,
-                                textButton: 'Demo',
-                                onTap: () {},
-                              ),
-                            ],
-                          )
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          ActionButtonProject(
+                            isHover: false.obs,
+                            textButton: 'View code',
+                            onTap: () {},
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
                         ],
                       ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
+                const ButtonNextPage(),
+                const ButtonPreviusPage(),
+              ],
             ),
           ),
         ],

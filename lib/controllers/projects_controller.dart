@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:get/get.dart';
 import 'package:personal_portfolio/models/projetcs_model.dart';
 
@@ -7,7 +8,7 @@ class ProjectsController extends GetxController {
   static ProjectsController get to => Get.find<ProjectsController>();
 
   late List<ProjectModel> projectsList;
-
+  final carouselController = CarouselController();
   @override
   void onClose() {
     ProjectsController.to.dispose();

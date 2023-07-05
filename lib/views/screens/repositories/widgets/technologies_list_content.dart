@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/utils/typography.dart';
 
@@ -11,21 +13,29 @@ class TechnologiesContent extends StatelessWidget {
       child: Wrap(
         children: List.generate(
           technologies.length,
-          (indx) => Container(
-            margin: const EdgeInsets.symmetric(
-              horizontal: 3,
-              vertical: 1,
-            ),
-            padding: const EdgeInsets.all(3),
-            decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(3),
-            ),
-            child: Text(
-              technologies[indx],
-              style: smallParagraphSecondaryStyle,
-            ),
-          ),
+          (indx) {
+            final randomColor = Color.fromRGBO(
+              Random().nextInt(256),
+              Random().nextInt(256),
+              Random().nextInt(256),
+              1,
+            );
+            return Container(
+              margin: const EdgeInsets.symmetric(
+                horizontal: 3,
+                vertical: 0.5,
+              ),
+              padding: const EdgeInsets.all(3),
+              decoration: BoxDecoration(
+                color: randomColor,
+                borderRadius: BorderRadius.circular(2),
+              ),
+              child: Text(
+                technologies[indx],
+                style: smallParagraphSecondaryStyle,
+              ),
+            );
+          },
         ),
       ),
     );

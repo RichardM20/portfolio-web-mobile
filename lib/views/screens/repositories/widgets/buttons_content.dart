@@ -5,8 +5,12 @@ import 'package:personal_portfolio/utils/colors_app.dart';
 import 'package:personal_portfolio/utils/typography.dart';
 
 class ActionButtonProject extends StatelessWidget {
-  const ActionButtonProject(
-      {super.key, required this.textButton, this.onTap, required this.isHover});
+  const ActionButtonProject({
+    super.key,
+    required this.textButton,
+    this.onTap,
+    required this.isHover,
+  });
   final String textButton;
   final Function()? onTap;
   final RxBool isHover;

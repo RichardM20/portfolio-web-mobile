@@ -5,7 +5,7 @@ class ProjectImagecontent extends StatelessWidget {
   final String asset;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Flexible(
       child: Image.asset(
         asset,
         fit: BoxFit.cover,
