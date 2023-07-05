@@ -12,19 +12,19 @@ class NameTextContent extends StatelessWidget {
         children: [
           TextSpan(
             text: "Hi there,\n",
-            style: headlineTextStyle,
+            style: bigPrimaryTitleStyle,
           ),
           TextSpan(
             text: "I'm ",
-            style: headlineTextStyle,
+            style: bigPrimaryTitleStyle,
           ),
           TextSpan(
             text: "Richard ",
-            style: headlineSecondaryTextStyle,
+            style: bigSecondayTitleStyle,
           ),
           TextSpan(
             text: "Morales",
-            style: headlineSecondaryTextStyle,
+            style: bigSecondayTitleStyle,
           ),
         ],
       ),

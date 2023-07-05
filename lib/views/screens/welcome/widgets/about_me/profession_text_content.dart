@@ -11,19 +11,19 @@ class ProfessionTextContent extends StatelessWidget {
         children: [
           TextSpan(
             text: "I am ",
-            style: bodyTextStyle,
+            style: mediumPrimaryTextStyle,
           ),
           TextSpan(
             text: "Into ",
-            style: bodyTextStyle,
+            style: mediumPrimaryTextStyle,
           ),
           TextSpan(
             text: "Flutter ",
-            style: bodySecondaryTextStyle,
+            style: mediumSecondaryTextStyle,
           ),
           TextSpan(
             text: "Develop",
-            style: bodySecondaryTextStyle,
+            style: mediumSecondaryTextStyle,
           ),
         ],
       ),
