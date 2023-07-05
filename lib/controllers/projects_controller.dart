@@ -34,7 +34,9 @@ class ProjectsController extends GetxController {
         images: project['images'],
         repositoryLink: project['repository_link'],
         published: project['published'],
-        storesLinks: project['storesLink'],
+        storesLinks: StoresLinks.fromJson(
+          project['stores_links'],
+        ),
       );
 
       projectList.add(projectModel);

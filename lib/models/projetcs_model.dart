@@ -12,46 +12,46 @@ String projectModelToJson(ProjectModel data) => json.encode(data.toJson());
 class ProjectModel {
   String? name;
   String? description;
-  bool? published;
-  String? repositoryLink;
-  StoresLinks? storesLinks;
   List<String>? technologies;
   String? images;
+  String? repositoryLink;
+  StoresLinks? storesLinks;
+  bool? published;
 
   ProjectModel({
     this.name,
     this.description,
-    this.published,
-    this.repositoryLink,
-    this.storesLinks,
     this.technologies,
     this.images,
+    this.repositoryLink,
+    this.storesLinks,
+    this.published,
   });
 
   factory ProjectModel.fromJson(Map<String, dynamic> json) => ProjectModel(
         name: json["name"],
         description: json["description"],
-        published: json["published"],
-        repositoryLink: json["repository_link"],
-        storesLinks: json["stores_links"] == null
-            ? null
-            : StoresLinks.fromJson(json["stores_links"]),
         technologies: json["technologies"] == null
             ? []
             : List<String>.from(json["technologies"]!.map((x) => x)),
         images: json["images"],
+        repositoryLink: json["repository_link"],
+        storesLinks: json["stores_links"] == null
+            ? null
+            : StoresLinks.fromJson(json["stores_links"]),
+        published: json["published"],
       );
 
   Map<String, dynamic> toJson() => {
         "name": name,
         "description": description,
-        "published": published,
-        "repository_link": repositoryLink,
-        "stores_links": storesLinks?.toJson(),
         "technologies": technologies == null
             ? []
             : List<dynamic>.from(technologies!.map((x) => x)),
         "images": images,
+        "repository_link": repositoryLink,
+        "stores_links": storesLinks?.toJson(),
+        "published": published,
       };
 }
 

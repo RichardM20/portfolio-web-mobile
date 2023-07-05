@@ -6,7 +6,7 @@ import 'package:personal_portfolio/views/screens/aboutme/aboutme_content.dart';
 import 'package:personal_portfolio/views/screens/testimonials/testimonials_content.dart';
 
 import 'repositories/repositories_content.dart';
-import 'welcome/widgets/navbar/navbar_content.dart';
+import '../widgets/navbar/navbar_content.dart';
 import 'welcome/welcome_content.dart';
 
 class Index extends StatefulWidget {

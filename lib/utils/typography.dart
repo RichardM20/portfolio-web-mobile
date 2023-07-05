@@ -57,7 +57,7 @@ const TextStyle smallParagraphStyle = TextStyle(
   color: Colors.white,
 );
 const TextStyle smallParagraphSecondaryStyle = TextStyle(
-  fontSize: 6,
+  fontSize: 8,
   fontFamily: "RobotoCondensed-Light",
   color: Colors.white,
 );

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1043484798465",
+    "project_id": "portfolio-fweb",
+    "storage_bucket": "portfolio-fweb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043484798465:android:5feadf5b92fdef71db9a00",
+        "android_client_info": {
+          "package_name": "com.example.personal_portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043484798465-dpp2sppihufm0h0c2fhn36a23mppmlfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1JXeObxDCbY-VH9f-R9t1nc5rdS0ykzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043484798465-dpp2sppihufm0h0c2fhn36a23mppmlfi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

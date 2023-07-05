@@ -10,8 +10,8 @@ class ExperienceAndSkillContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => Container(
-        height: 25,
-        width: 60,
+        height: 30,
+        width: 70,
         padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 5),
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 9, 38, 60),
@@ -35,7 +35,7 @@ class ExperienceAndSkillContent extends StatelessWidget {
               textAlign: TextAlign.left,
               style: TextStyle(
                 fontFamily: FontStyles.boldStyle,
-                fontSize: 6,
+                fontSize: 8,
                 color: Colors.white,
               ),
             ),

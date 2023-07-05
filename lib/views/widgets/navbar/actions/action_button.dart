@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:personal_portfolio/views/screens/welcome/widgets/navbar/actions/action_button_decoration.dart';
-import 'package:personal_portfolio/views/screens/welcome/widgets/navbar/actions/action_button_text_content.dart';
+import 'package:personal_portfolio/views/widgets/navbar/actions/action_button_decoration.dart';
+import 'package:personal_portfolio/views/widgets/navbar/actions/action_button_text_content.dart';
 
 class ActionButton extends StatelessWidget {
   const ActionButton({

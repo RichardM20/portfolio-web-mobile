@@ -20,21 +20,21 @@ List socialsIcons = [
     'icon': 'linkedin-icon.svg',
     'isHover': false.obs,
     'text': "View to Linkedin",
-    'color': Colors.blueGrey,
+    'color': const Color(0xFF0077B5),
     'url': 'https://www.linkedin.com/in/rickdeveloper'
   },
   {
     'icon': 'instagram-icon.svg',
     'isHover': false.obs,
     'text': "Contact for Instagram",
-    'color': Colors.pink,
+    'color': const Color(0xFFE1306C),
     'url': 'https://instagram.com/rickx18?igshid=NGExMmI2YTkyZg=='
   },
   {
     'icon': 'whatsapp-icon.svg',
     'isHover': false.obs,
     'text': "Contact for Whatsapp",
-    'color': Colors.green,
+    'color': const Color(0xFF25D366),
     'url': 'https://api.whatsapp.com/send?phone=573022470728'
   },
 ];
