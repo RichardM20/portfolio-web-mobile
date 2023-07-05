@@ -8,11 +8,4 @@ class NavbarController extends GetxController {
   PageController pageController = PageController(
     initialPage: 0,
   );
-  late AnimationController animationController;
-  late Animation<double> animation;
-  final onHover = false.obs;
-  //
-  void animateButton() {
-    animationController.forward(from: 0.0);
-  }
 }

@@ -8,6 +8,6 @@ class TestimonialsContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const BlockWrapper(TestimonialsBody());
+    return BlockWrapper(TestimonialsBody());
   }
 }
