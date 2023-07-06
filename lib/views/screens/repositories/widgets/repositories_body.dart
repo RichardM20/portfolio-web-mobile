@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/utils/typography.dart';
-import 'package:personal_portfolio/views/screens/repositories/widgets/carousel/carousel_content.dart';
+import 'package:personal_portfolio/utils/typography_style.dart';
+import 'package:personal_portfolio/views/screens/repositories/widgets/carousel_content.dart';
 
 class RepositoriesBody extends StatelessWidget {
   const RepositoriesBody({super.key});
@@ -18,7 +18,7 @@ class RepositoriesBody extends StatelessWidget {
             padding: EdgeInsets.only(top: 20, bottom: 30),
             child: Text(
               "Projects",
-              style: mediumSecondaryTextStyle,
+              style: titleSecondaryTextStyle,
             ),
           ),
           CarouselContent()

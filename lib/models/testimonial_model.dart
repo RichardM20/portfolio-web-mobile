@@ -15,10 +15,14 @@ class TestimonialModel {
   int? rate;
   DateTime? publishedAt;
   String? message;
+  String? profession;
+  String? profileimage;
 
   TestimonialModel({
     this.username,
     this.rate,
+    this.profession,
+    this.profileimage,
     this.publishedAt,
     this.message,
   });
@@ -26,6 +30,8 @@ class TestimonialModel {
   factory TestimonialModel.fromJson(Map<String, dynamic> json) =>
       TestimonialModel(
         username: json["username"],
+        profession: json['profession'],
+        profileimage: json["profile_image"],
         rate: json["rate"],
         publishedAt: json["publishedAt"] == null
             ? null

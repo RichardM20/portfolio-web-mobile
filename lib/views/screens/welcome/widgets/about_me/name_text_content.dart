@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/utils/typography.dart';
+import 'package:personal_portfolio/utils/typography_style.dart';
 import 'package:personal_portfolio/views/widgets/theme/theme_app.dart';
 
 class NameTextContent extends StatelessWidget {

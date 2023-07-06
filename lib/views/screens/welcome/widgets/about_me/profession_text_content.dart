@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/utils/typography.dart';
+import 'package:personal_portfolio/utils/typography_style.dart';
 
 class ProfessionTextContent extends StatelessWidget {
   const ProfessionTextContent({super.key});
@@ -11,19 +11,19 @@ class ProfessionTextContent extends StatelessWidget {
         children: [
           TextSpan(
             text: "I am ",
-            style: mediumPrimaryTextStyle,
+            style: titlePrimaryTextStyle,
           ),
           TextSpan(
             text: "Into ",
-            style: mediumPrimaryTextStyle,
+            style: titlePrimaryTextStyle,
           ),
           TextSpan(
             text: "Flutter ",
-            style: mediumSecondaryTextStyle,
+            style: titleSecondaryTextStyle,
           ),
           TextSpan(
             text: "Develop",
-            style: mediumSecondaryTextStyle,
+            style: titleSecondaryTextStyle,
           ),
         ],
       ),

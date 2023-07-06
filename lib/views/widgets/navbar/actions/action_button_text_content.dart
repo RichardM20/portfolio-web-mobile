@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:personal_portfolio/views/widgets/theme/theme_app.dart';
+import 'package:personal_portfolio/utils/typography_family.dart';
 
 class ActionButtonText extends StatelessWidget {
   const ActionButtonText(
@@ -13,7 +13,7 @@ class ActionButtonText extends StatelessWidget {
       () => Text(
         name,
         style: TextStyle(
-          fontFamily: FontStyles.boldStyle,
+          fontFamily: semiBold,
           fontSize: 10,
           color: isHover.value
               ? Colors.white

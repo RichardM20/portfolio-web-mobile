@@ -11,6 +11,7 @@ class FirebaseService {
   Future<void> addTestimonial(TestimonialModel model) async {
     final collectionRef = FirebaseFirestore.instance.collection('testimonials');
     final testimonialData = {
+      'profile_image': model.profileimage,
       'username': model.username,
       'rate': model.rate,
       'message': model.message,

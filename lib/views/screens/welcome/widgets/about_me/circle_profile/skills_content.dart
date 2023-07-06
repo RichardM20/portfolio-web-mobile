@@ -21,6 +21,7 @@ class CircleSkillsContent extends StatelessWidget {
         child: CircleDecoration(
           child: Center(
             child: Stack(
+              clipBehavior: Clip.none,
               children: [
                 const Positioned(
                   left: 20,
@@ -47,11 +48,19 @@ class CircleSkillsContent extends StatelessWidget {
                   ),
                 ),
                 const Positioned(
-                  right: 20,
+                  right: 10,
                   bottom: 50,
                   child: SkillDecoration(
                     skillName: 'Riverpod',
                     backgroundColor: Colors.blue,
+                  ),
+                ),
+                const Positioned(
+                  right: -10,
+                  top: 60,
+                  child: SkillDecoration(
+                    skillName: 'API Rest',
+                    backgroundColor: Colors.green,
                   ),
                 ),
                 Positioned(
@@ -71,7 +80,7 @@ class CircleSkillsContent extends StatelessWidget {
                   ),
                 ),
                 const Positioned(
-                  left: 60,
+                  left: 70,
                   bottom: 50,
                   child: SkillDecoration(
                     skillName: 'Git',

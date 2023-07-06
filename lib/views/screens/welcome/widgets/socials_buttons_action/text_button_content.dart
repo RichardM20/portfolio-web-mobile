@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/views/widgets/theme/theme_app.dart';
+import 'package:personal_portfolio/utils/typography_style.dart';
 
 class TextButtonContent extends StatelessWidget {
   const TextButtonContent({super.key, required this.text});
@@ -9,12 +9,7 @@ class TextButtonContent extends StatelessWidget {
     return Flexible(
       child: Text(
         text,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 7,
-          fontFamily: FontStyles.boldStyle,
-          fontWeight: FontWeight.bold,
-        ),
+        style: smallParagraphSecondaryStyle,
       ),
     );
   }

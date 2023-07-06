@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/utils/typography.dart';
+import 'package:personal_portfolio/utils/typography_style.dart';
 
 class TechnologiesContent extends StatelessWidget {
   const TechnologiesContent({super.key, required this.technologies});
@@ -17,7 +17,7 @@ class TechnologiesContent extends StatelessWidget {
             final randomColor = Color.fromRGBO(
               Random().nextInt(256),
               Random().nextInt(256),
-              Random().nextInt(256),
+              Random().nextInt(150),
               1,
             );
             return Container(

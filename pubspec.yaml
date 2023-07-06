@@ -82,15 +82,21 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: RobotoCondensed-Bold
+    - family: Inter-Bold
       fonts:
-        - asset: assets/fonts/RobotoCondensed-Bold.ttf
-    - family: RobotoCondensed-Light
+        - asset: assets/fonts/Inter-Bold.ttf
+    - family: Inter-SemiBold
       fonts:
-        - asset: assets/fonts/RobotoCondensed-Light.ttf
-    - family: RobotoCondensed-Regular
+        - asset: assets/fonts/Inter-SemiBold.ttf
+    - family: Inter-Light
       fonts:
-        - asset: assets/fonts/RobotoCondensed-Regular.ttf  
+        - asset: assets/fonts/Inter-Light.ttf
+    - family: Inter-Regular
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf  
+    - family: Inter-Medium
+      fonts:
+        - asset: assets/fonts/Inter-Medium.ttf
  
  
   #

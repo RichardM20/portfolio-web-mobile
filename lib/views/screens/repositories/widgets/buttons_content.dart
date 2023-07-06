@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:personal_portfolio/utils/colors_app.dart';
-import 'package:personal_portfolio/utils/typography.dart';
+import 'package:personal_portfolio/utils/typography_style.dart';
 
 class ActionButtonProject extends StatelessWidget {
   const ActionButtonProject({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:personal_portfolio/utils/typography.dart';
+import 'package:personal_portfolio/utils/typography_style.dart';
 import 'package:personal_portfolio/views/widgets/text/reactive_text.dart';
 
 class AboutMeContent extends StatelessWidget {

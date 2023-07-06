@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/views/widgets/theme/theme_app.dart';
+import 'package:personal_portfolio/utils/typography_style.dart';
 
 class SkillDecoration extends StatelessWidget {
   const SkillDecoration({
@@ -29,11 +29,7 @@ class SkillDecoration extends StatelessWidget {
       ),
       child: Text(
         skillName,
-        style: TextStyle(
-          color: Colors.white,
-          fontFamily: FontStyles.regularStyle,
-          fontSize: 8,
-        ),
+        style: smallParagraphStyle,
       ),
     );
   }

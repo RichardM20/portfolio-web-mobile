@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/utils/colors_app.dart';
-import 'package:personal_portfolio/utils/typography.dart';
+import 'package:personal_portfolio/utils/typography_style.dart';
 
 dialog(context, {String? title, String? info}) {
   return showDialog(
@@ -21,7 +21,7 @@ dialog(context, {String? title, String? info}) {
                 children: [
                   Text(
                     title!,
-                    style: paragraphSecondayTextStyle,
+                    style: subtitlePrimaryStyle,
                   ),
                   const Divider(
                     color: primaryColor,
