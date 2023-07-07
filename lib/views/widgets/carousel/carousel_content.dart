@@ -17,7 +17,7 @@ class GenericCarouselContent extends StatelessWidget {
   final double? height;
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Column(
       children: [
         CarouselSlider(
           options: CarouselOptions(
@@ -32,22 +32,18 @@ class GenericCarouselContent extends StatelessWidget {
           carouselController: carouselController,
           items: listWidgets,
         ),
-        Positioned(
-          bottom: 80,
-          left: 0,
-          right: 0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ButtonPreviusPage(
-                controller: carouselController,
-              ),
-              ButtonNextPage(
-                controller: carouselController,
-              ),
-            ],
-          ),
-        )
+        const SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ButtonPreviusPage(
+              controller: carouselController,
+            ),
+            ButtonNextPage(
+              controller: carouselController,
+            ),
+          ],
+        ),
       ],
     );
   }

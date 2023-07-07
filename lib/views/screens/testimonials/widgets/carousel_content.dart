@@ -15,18 +15,20 @@ class CarouselTestimonialsContent extends StatelessWidget {
     return GenericCarouselContent(
       carouselController: _controller.carouselController,
       height: 150,
-      listWidgets: const [
-        TestimonialItemDecoration(
+      listWidgets: List.generate(_controller.testimonialsModel.length, (index) {
+        final data = _controller.testimonialsModel[index];
+
+        return TestimonialItemDecoration(
           widget: TestimonialItemData(
-            date: '20-01-2002',
-            image: '',
-            message: 'El mejor del mundo',
-            profession: 'nada de nada',
-            name: 'Rick',
-            rate: 3.5,
+            date: data.publishedAt.toString(),
+            image: data.profileimage ?? "",
+            message: data.message ?? "",
+            profession: data.profession ?? "",
+            name: data.username ?? "",
+            rate: double.parse(data.rate.toString()) ?? 0.0,
           ),
-        ),
-      ],
+        );
+      }),
     );
   }
 }

@@ -2,10 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:personal_portfolio/models/testimonial_model.dart';
 
 class FirebaseService {
-  Future<List<DocumentSnapshot<Map<String, dynamic>>>> getAllDocuments() async {
-    final collectionRef = FirebaseFirestore.instance.collection('testimonials');
-    final querySnapshot = await collectionRef.get();
-    return querySnapshot.docs;
+  final _firestoreInstance = FirebaseFirestore.instance;
+  Stream<QuerySnapshot> getCollectionStream(String collectionName) {
+    return _firestoreInstance.collection('testimonials').snapshots();
   }
 
   Future<void> addTestimonial(TestimonialModel model) async {

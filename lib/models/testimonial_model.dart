@@ -4,6 +4,8 @@
 
 import 'dart:convert';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 TestimonialModel testimonialModelFromJson(String str) =>
     TestimonialModel.fromJson(json.decode(str));
 
@@ -13,7 +15,7 @@ String testimonialModelToJson(TestimonialModel data) =>
 class TestimonialModel {
   String? username;
   int? rate;
-  DateTime? publishedAt;
+  Timestamp? publishedAt;
   String? message;
   String? profession;
   String? profileimage;
@@ -33,16 +35,14 @@ class TestimonialModel {
         profession: json['profession'],
         profileimage: json["profile_image"],
         rate: json["rate"],
-        publishedAt: json["publishedAt"] == null
-            ? null
-            : DateTime.parse(json["publishedAt"]),
+        publishedAt: json["publishedAt"],
         message: json["message"],
       );
 
   Map<String, dynamic> toJson() => {
         "username": username,
         "rate": rate,
-        "publishedAt": publishedAt?.toIso8601String(),
+        "publishedAt": publishedAt,
         "message": message,
       };
 }

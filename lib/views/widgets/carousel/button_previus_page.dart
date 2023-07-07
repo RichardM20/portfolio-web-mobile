@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'button_action_content.dart';
 
@@ -10,6 +11,7 @@ class ButtonPreviusPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ButtonActionCarousel(
       isNext: false,
+      isHover: false.obs,
       carouselController: controller,
     );
   }
