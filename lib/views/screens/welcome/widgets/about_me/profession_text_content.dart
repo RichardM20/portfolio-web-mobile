@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/utils/text_content.dart';
 import 'package:personal_portfolio/utils/typography_style.dart';
 
 class ProfessionTextContent extends StatelessWidget {
@@ -18,7 +19,7 @@ class ProfessionTextContent extends StatelessWidget {
             style: titlePrimaryTextStyle,
           ),
           TextSpan(
-            text: "Flutter ",
+            text: "$profession ",
             style: titleSecondaryTextStyle,
           ),
           TextSpan(

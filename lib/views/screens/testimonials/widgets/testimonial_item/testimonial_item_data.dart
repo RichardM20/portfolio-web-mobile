@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:personal_portfolio/utils/colors_app.dart';
+import 'package:intl/intl.dart';
 import 'package:personal_portfolio/utils/typography_style.dart';
-
-import 'start_rating_content.dart';
+import 'package:personal_portfolio/views/screens/testimonials/widgets/testimonial_item/top_decoration_content.dart';
 
 class TestimonialItemData extends StatelessWidget {
   const TestimonialItemData({
@@ -20,70 +18,37 @@ class TestimonialItemData extends StatelessWidget {
   final double rate;
   final String profession;
   final String message;
-  final String date;
+  final DateTime date;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(5),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
+      child: Stack(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 35,
-                    width: 35,
-                    margin: const EdgeInsets.only(right: 10),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: primaryColor,
-                        strokeAlign: 1.0,
-                        width: 0.5,
-                      ),
-                    ),
-                    child: image.isEmpty
-                        ? SvgPicture.asset(
-                            'assets/icons/profile-icon.svg',
-                          )
-                        : Image.network(
-                            image,
-                            fit: BoxFit.cover,
-                          ),
-                  ),
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "$name\n",
-                          style: subtitlePrimaryStyle,
-                        ),
-                        TextSpan(
-                          text: profession,
-                          style: paragraphTextStyle,
-                        )
-                      ],
-                    ),
-                  )
-                ],
+              TopTestimonialContent(
+                image: image,
+                name: name,
+                rate: rate,
+                profession: profession,
               ),
-              StarRating(
-                rating: rate,
-                starSize: 10,
+              const Divider(),
+              Text(
+                message,
+                style: paragraphTextStyle,
               )
             ],
           ),
-          const Divider(),
-          Text(
-            message,
-            style: paragraphTextStyle,
+          Positioned(
+            left: 0,
+            bottom: 0,
+            child: Text(
+              DateFormat.yMMMMd('es').add_Hm().format(date),
+              style: dateTextStyle,
+            ),
           )
         ],
       ),

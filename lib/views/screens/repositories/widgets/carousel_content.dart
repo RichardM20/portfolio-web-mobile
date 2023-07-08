@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:personal_portfolio/controllers/projects_controller.dart';
-import 'package:personal_portfolio/views/screens/repositories/widgets/buttons_content.dart';
 import 'package:personal_portfolio/views/screens/repositories/widgets/project_decoration_content.dart';
 import 'package:personal_portfolio/views/screens/repositories/widgets/project_imgage_content.dart';
 import 'package:personal_portfolio/views/screens/repositories/widgets/project_info_content.dart';
@@ -9,6 +8,7 @@ import 'package:personal_portfolio/views/screens/repositories/widgets/stores_ico
 import 'package:personal_portfolio/views/widgets/carousel/carousel_content.dart';
 import 'package:personal_portfolio/views/widgets/dialogs/dialog.dart';
 import 'dart:html' as html;
+import 'buttons_content.dart';
 
 class CarouselContent extends StatelessWidget {
   CarouselContent({super.key});
@@ -47,34 +47,31 @@ class CarouselContent extends StatelessWidget {
                       technologies:
                           _contrller.projectsList[index].technologies!,
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    ActionButtonProject(
-                      isHover: false.obs,
-                      textButton: 'View code',
-                      onTap: () {
-                        if (_contrller
-                            .projectsList[index].repositoryLink!.isEmpty) {
-                          return dialog(
-                            context,
-                            info:
-                                "This code is confidential, so it cannot be visible to the general public.",
-                            title: "Information",
-                          );
-                        } else {
-                          html.window.open(
-                            _contrller.projectsList[index].repositoryLink!,
-                            '_blank',
-                          );
-                        }
-                      },
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
                   ],
                 ),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: ActionButtonProject(
+                    isHover: false.obs,
+                    textButton: 'View code',
+                    onTap: () {
+                      if (_contrller
+                          .projectsList[index].repositoryLink!.isEmpty) {
+                        return dialog(
+                          context,
+                          info:
+                              "This code is confidential, so it cannot be visible to the general public.",
+                          title: "Information",
+                        );
+                      } else {
+                        html.window.open(
+                          _contrller.projectsList[index].repositoryLink!,
+                          '_blank',
+                        );
+                      }
+                    },
+                  ),
+                )
               ],
             ),
           ),

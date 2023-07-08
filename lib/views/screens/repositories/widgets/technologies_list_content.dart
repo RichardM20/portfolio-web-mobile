@@ -22,8 +22,8 @@ class TechnologiesContent extends StatelessWidget {
             );
             return Container(
               margin: const EdgeInsets.symmetric(
-                horizontal: 3,
-                vertical: 0.5,
+                horizontal: 2,
+                vertical: 1,
               ),
               padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
@@ -32,7 +32,7 @@ class TechnologiesContent extends StatelessWidget {
               ),
               child: Text(
                 technologies[indx],
-                style: smallParagraphSecondaryStyle,
+                style: technologiesTextStyle,
               ),
             );
           },

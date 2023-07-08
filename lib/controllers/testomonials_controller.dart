@@ -1,5 +1,4 @@
 import 'package:carousel_slider/carousel_controller.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:personal_portfolio/models/testimonial_model.dart';
@@ -15,32 +14,23 @@ class TestimonialsController extends GetxController {
   final TextEditingController messageController = TextEditingController();
   final TextEditingController professionController = TextEditingController();
   final CarouselController carouselController = CarouselController();
+  final loadingData = true.obs;
   //>
   @override
   void onInit() {
-    super.onInit();
     loadData();
+    super.onInit();
   }
 
-  loadData() async {
-    print("load data method has been called");
+  loadData() {
+    loadingData.value = true;
     try {
-      _firebaseService.getCollectionStream('collectionName').listen((snapshot) {
-        testimonialsModel.clear();
-        for (var doc in snapshot.docs) {
-          TestimonialModel model = TestimonialModel(
-            message: doc.get('message'),
-            profession: doc.get('profession'),
-            profileimage: doc.get('profile_image'),
-            publishedAt: doc.get('publishedAt'),
-            rate: doc.get('rate'),
-            username: doc.get('username'),
-          );
-
-          testimonialsModel.add(model);
-        }
+      _firebaseService.getTestimonialsStream().listen((testimonialList) {
+        testimonialsModel.value = testimonialList;
+        loadingData.value = false;
       });
     } catch (e) {
+      loadingData.value = false;
       print("Exception: $e");
     }
   }
@@ -51,7 +41,7 @@ class TestimonialsController extends GetxController {
         profileimage: '',
         profession: professionController.text,
         message: messageController.text,
-        publishedAt: Timestamp.fromDate(DateTime.now().toLocal()),
+        publishedAt: DateTime.now(),
         rate: int.parse(rateController.text),
         username: usernameController.text,
       ),

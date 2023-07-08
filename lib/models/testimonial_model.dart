@@ -15,7 +15,7 @@ String testimonialModelToJson(TestimonialModel data) =>
 class TestimonialModel {
   String? username;
   int? rate;
-  Timestamp? publishedAt;
+  DateTime? publishedAt;
   String? message;
   String? profession;
   String? profileimage;

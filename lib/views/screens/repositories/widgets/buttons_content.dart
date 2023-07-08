@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:personal_portfolio/utils/colors_app.dart';
-import 'package:personal_portfolio/utils/typography_style.dart';
+import 'package:personal_portfolio/utils/typography_family.dart';
 
 class ActionButtonProject extends StatelessWidget {
   const ActionButtonProject({
@@ -22,19 +22,38 @@ class ActionButtonProject extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         child: Obx(
-          () => Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 8,
-              vertical: 4,
-            ),
+          () => AnimatedContainer(
+            duration: const Duration(milliseconds: 250),
+            margin: const EdgeInsets.only(bottom: 5),
+            height: 20,
+            width: isHover.value ? 70 : 30,
             decoration: BoxDecoration(
-              color: isHover.value ? primaryColor30 : primaryColor,
-              borderRadius: BorderRadius.circular(3),
+              color: isHover.value ? primaryColor : Colors.white,
+              borderRadius: BorderRadius.circular(100),
             ),
-            child: Text(
-              textButton,
-              style:
-                  isHover.value ? buttonsSecondaryTextstyle : buttonsTextStyle,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  Icons.code,
+                  color: isHover.value ? Colors.white : primaryColor,
+                  size: 15,
+                ),
+                if (isHover.value)
+                  const Flexible(
+                    child: Text(
+                      "View code",
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 8,
+                        color: Colors.white,
+                        fontFamily: regularStyle,
+                      ),
+                    ),
+                  )
+              ],
             ),
           ),
         ),

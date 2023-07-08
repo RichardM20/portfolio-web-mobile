@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:personal_portfolio/controllers/profile_and_experience_controller.dart';
 import 'package:personal_portfolio/controllers/socials_buttons_action_controller.dart';
 import 'package:personal_portfolio/controllers/navbar_controller.dart';
@@ -17,7 +18,9 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  initializeDateFormatting().then((_) {
+    runApp(const MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {

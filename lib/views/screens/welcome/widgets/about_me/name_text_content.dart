@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/utils/text_content.dart';
 import 'package:personal_portfolio/utils/typography_style.dart';
-import 'package:personal_portfolio/views/widgets/theme/theme_app.dart';
 
 class NameTextContent extends StatelessWidget {
   const NameTextContent({super.key});
@@ -19,11 +19,11 @@ class NameTextContent extends StatelessWidget {
             style: bigPrimaryTitleStyle,
           ),
           TextSpan(
-            text: "Richard ",
+            text: "$name ",
             style: bigSecondayTitleStyle,
           ),
           TextSpan(
-            text: "Morales",
+            text: apell,
             style: bigSecondayTitleStyle,
           ),
         ],

@@ -35,7 +35,7 @@ const TextStyle buttonsTextStyle = TextStyle(
   color: Colors.white,
 );
 const TextStyle buttonsSecondaryTextstyle = TextStyle(
-  fontSize: 10,
+  fontSize: 8,
   fontFamily: semiBold,
   color: primaryColor,
 );
@@ -58,4 +58,14 @@ const TextStyle smallParagraphSecondaryStyle = TextStyle(
   fontSize: 8,
   fontFamily: regularStyle,
   color: Colors.white,
+);
+const TextStyle technologiesTextStyle = TextStyle(
+  fontSize: 7,
+  fontFamily: regularStyle,
+  color: Colors.white,
+);
+const TextStyle dateTextStyle = TextStyle(
+  fontSize: 7,
+  fontFamily: regularStyle,
+  color: Colors.grey,
 );
