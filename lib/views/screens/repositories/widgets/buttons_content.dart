@@ -18,7 +18,7 @@ class ActionButtonProject extends StatelessWidget {
   Widget build(BuildContext context) {
     return MouseRegion(
       onEnter: (event) => isHover.value = true,
-      onExit: (event) => isHover.value = false,
+      onExit: (event) => isHover.value = false,cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: onTap,
         child: Obx(

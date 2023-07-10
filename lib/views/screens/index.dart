@@ -21,6 +21,7 @@ class _IndexState extends State<Index> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade100,
       body: Container(
         height: double.infinity,
         width: double.infinity,

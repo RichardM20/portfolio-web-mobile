@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:personal_portfolio/controllers/profile_and_experience_controller.dart';
+import 'package:personal_portfolio/utils/colors_app.dart';
 
 class CircleDecoration extends StatelessWidget {
   CircleDecoration({
@@ -20,7 +21,7 @@ class CircleDecoration extends StatelessWidget {
             end: Alignment.bottomRight,
             colors: _controller.isHover.value == false
                 ? [
-                    const Color.fromARGB(255, 9, 73, 122),
+                    primaryColor,
                     const Color.fromARGB(255, 0, 31, 64),
                   ]
                 : [

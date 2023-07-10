@@ -1,5 +1,5 @@
-import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/utils/colors_app.dart';
 
 class PolygonPainter extends CustomPainter {
   @override
@@ -8,11 +8,11 @@ class PolygonPainter extends CustomPainter {
     final rect = Rect.fromLTWH(0, 0, size.width, size.height);
 
     // Color de fondo
-    const gradient = LinearGradient(
+    LinearGradient gradient = const LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
       colors: [
-        Color.fromARGB(255, 9, 73, 122),
+        primaryColor,
         Color.fromARGB(255, 0, 31, 64),
       ],
     );

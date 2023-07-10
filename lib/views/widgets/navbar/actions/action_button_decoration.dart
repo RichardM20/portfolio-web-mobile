@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:personal_portfolio/utils/colors_app.dart';
 
 class ActionDecorationContent extends StatelessWidget {
   const ActionDecorationContent({
@@ -27,9 +28,7 @@ class ActionDecorationContent extends StatelessWidget {
           0.0,
         ),
         decoration: BoxDecoration(
-          color: isHover.value
-              ? const Color.fromARGB(255, 9, 73, 122).withOpacity(0.3)
-              : Colors.transparent,
+          color: isHover.value ? primaryColor30 : Colors.transparent,
           borderRadius: BorderRadius.circular(4),
         ),
         child: widget,

@@ -4,3 +4,5 @@ const String name = "Richard";
 const String apell = "Morales";
 const String experienceYears = "2";
 const String profession = "Flutter";
+const String testimonialsText =
+    "I would love to hear your feedback on my work! If you have had the opportunity to work with me, I invite you to leave a testimonial to share your experience. :)";

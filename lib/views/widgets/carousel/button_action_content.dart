@@ -23,7 +23,7 @@ class ButtonActionCarousel extends StatelessWidget {
               duration: const Duration(milliseconds: 300),
               curve: Curves.linear,
             ),
-      child: MouseRegion(
+      child: MouseRegion(cursor: SystemMouseCursors.click,
         onEnter: (event) => isHover.value = true,
         onExit: (event) => isHover.value = false,
         child: Obx(
@@ -54,7 +54,7 @@ class ButtonActionCarousel extends StatelessWidget {
             child: Center(
               child: Icon(
                 isNext ? Icons.arrow_forward_ios_sharp : Icons.arrow_back_ios,
-                color: Colors.white,
+                color: whiteColor,
                 size: 15,
               ),
             ),

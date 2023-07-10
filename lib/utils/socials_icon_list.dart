@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'colors_app.dart';
+
 List socialsIcons = [
   {
     'icon': 'download-icon.svg',
     'isHover': false.obs,
     'text': "Download CV",
-    'color': const Color.fromARGB(255, 9, 73, 122),
+    'color': primaryColor,
     'url': ""
   },
   {

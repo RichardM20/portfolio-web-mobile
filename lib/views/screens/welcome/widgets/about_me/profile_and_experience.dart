@@ -12,7 +12,7 @@ class ProfileAndExperienceSkillContent extends StatelessWidget {
     return SizedBox(
       height: 170,
       width: 170,
-      child: MouseRegion(
+      child: MouseRegion(cursor: SystemMouseCursors.click,
         onEnter: (event) {
           _controller.isHover.value = true;
         },

@@ -1,29 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:personal_portfolio/controllers/testomonials_controller.dart';
+import 'package:personal_portfolio/utils/text_content.dart';
 import 'package:personal_portfolio/utils/typography_style.dart';
 
+import 'add_testimony_button.dart';
 import 'carousel_content.dart';
 
 class TestimonialsBody extends StatelessWidget {
-  const TestimonialsBody({super.key});
-
+  TestimonialsBody({super.key});
+  final _instance = Get.put(TestimonialsController());
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
           padding: EdgeInsets.only(top: 20, bottom: 30),
-          child: Text(
-            "Testimonials",
-            style: titleSecondaryTextStyle,
+          child: Center(
+            child: Text(
+              "Testimonials",
+              textAlign: TextAlign.center,
+              style: titleSecondaryTextStyle,
+            ),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.only(bottom: 10),
-          child: Text(
-            "I would love to hear your feedback on my work! If you have had the opportunity to work with me, I invite you to leave a testimonial to share your experience. :)",
-            style: paragraphTextStyle,
+        Center(
+          child: Container(
+            width: Get.width * 0.3,
+            padding: const EdgeInsets.only(bottom: 10),
+            child: const Text(
+              testimonialsText,
+              textAlign: TextAlign.center,
+              style: paragraphTextStyle,
+            ),
           ),
+        ),
+        AddTestimonyButton(
+          isHover: false.obs,
         ),
         CarouselTestimonialsContent(),
       ],

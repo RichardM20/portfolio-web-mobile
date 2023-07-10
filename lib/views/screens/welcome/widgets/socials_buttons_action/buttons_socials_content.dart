@@ -5,6 +5,7 @@ import 'package:personal_portfolio/controllers/socials_buttons_action_controller
 import 'icon_social_content.dart';
 import 'text_button_content.dart';
 import 'dart:html' as html;
+import 'package:personal_portfolio/utils/colors_app.dart';
 
 class SocialsButtons extends StatefulWidget {
   const SocialsButtons({
@@ -40,7 +41,7 @@ class _SocialsButtonsState extends State<SocialsButtons>
   @override
   Widget build(BuildContext context) {
     return Obx(
-      () => MouseRegion(
+      () => MouseRegion(cursor: SystemMouseCursors.click,
         onEnter: (event) {
           widget.isHover.value = true;
           controller.animationController.forward(from: 0.0);
@@ -57,7 +58,7 @@ class _SocialsButtonsState extends State<SocialsButtons>
             decoration: BoxDecoration(
                 color: widget.isHover.value == true
                     ? widget.background
-                    : const Color.fromARGB(255, 9, 73, 122),
+                    : primaryColor,
                 borderRadius: BorderRadius.circular(50),
                 boxShadow: widget.isHover.value == false
                     ? []

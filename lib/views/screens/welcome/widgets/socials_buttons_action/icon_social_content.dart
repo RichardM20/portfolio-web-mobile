@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:personal_portfolio/utils/colors_app.dart';
 
 class SocialIconContent extends StatelessWidget {
   const SocialIconContent({
@@ -20,7 +21,7 @@ class SocialIconContent extends StatelessWidget {
       child: SvgPicture.asset(
         'assets/icons/$iconName',
         width: 30,
-        color: Colors.white,
+        color: whiteColor,
       ),
     );
   }

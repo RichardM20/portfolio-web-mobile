@@ -6,7 +6,7 @@ import 'typography_family.dart';
 const TextStyle bigPrimaryTitleStyle = TextStyle(
   fontSize: 30,
   fontFamily: semiBold,
-  color: color,
+  color: blackColor,
 );
 const TextStyle bigSecondayTitleStyle = TextStyle(
   fontSize: 30,
@@ -16,7 +16,7 @@ const TextStyle bigSecondayTitleStyle = TextStyle(
 const TextStyle titlePrimaryTextStyle = TextStyle(
   fontSize: 20,
   fontFamily: mediumStyle,
-  color: color,
+  color: blackColor,
 );
 const TextStyle titleSecondaryTextStyle = TextStyle(
   fontSize: 20,
@@ -26,13 +26,13 @@ const TextStyle titleSecondaryTextStyle = TextStyle(
 const TextStyle paragraphTextStyle = TextStyle(
   fontSize: 10,
   fontFamily: regularStyle,
-  color: color,
+  color: blackColor,
 );
 
 const TextStyle buttonsTextStyle = TextStyle(
   fontSize: 10,
   fontFamily: semiBold,
-  color: Colors.white,
+  color: whiteColor,
 );
 const TextStyle buttonsSecondaryTextstyle = TextStyle(
   fontSize: 8,
@@ -47,22 +47,22 @@ const TextStyle subtitlePrimaryStyle = TextStyle(
 const TextStyle subtitleSecondaryStyle = TextStyle(
   fontSize: 12,
   fontFamily: semiBold,
-  color: color,
+  color: blackColor,
 );
 const TextStyle smallParagraphStyle = TextStyle(
   fontSize: 8,
   fontFamily: lightStyle,
-  color: Colors.white,
+  color: whiteColor,
 );
 const TextStyle smallParagraphSecondaryStyle = TextStyle(
   fontSize: 8,
   fontFamily: regularStyle,
-  color: Colors.white,
+  color: whiteColor,
 );
 const TextStyle technologiesTextStyle = TextStyle(
   fontSize: 7,
   fontFamily: regularStyle,
-  color: Colors.white,
+  color: whiteColor,
 );
 const TextStyle dateTextStyle = TextStyle(
   fontSize: 7,

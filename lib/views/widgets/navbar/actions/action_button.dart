@@ -16,7 +16,7 @@ class ActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
+    return MouseRegion(cursor: SystemMouseCursors.click,
       onEnter: (event) {
         isHover.value = true;
       },

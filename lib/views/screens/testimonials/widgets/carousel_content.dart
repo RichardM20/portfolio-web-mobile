@@ -9,7 +9,7 @@ import 'testimonial_item/testimonial_item_data.dart';
 
 class CarouselTestimonialsContent extends StatelessWidget {
   CarouselTestimonialsContent({super.key});
-  final _instance = Get.put(TestimonialsController());
+
   final _controller = TestimonialsController.to;
   @override
   Widget build(BuildContext context) {

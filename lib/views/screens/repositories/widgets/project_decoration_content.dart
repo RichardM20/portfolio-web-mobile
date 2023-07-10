@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/utils/colors_app.dart';
 
 class ProjectContentDecoration extends StatelessWidget {
   const ProjectContentDecoration({
@@ -21,7 +22,7 @@ class ProjectContentDecoration extends StatelessWidget {
             offset: Offset(0.0, 0.0),
           )
         ],
-        color: Colors.white,
+        color: whiteColor,
       ),
       child: widget,
     );
