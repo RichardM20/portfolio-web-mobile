@@ -30,6 +30,7 @@ class FirebaseService {
     final testimonialData = {
       'profile_image': model.profileimage,
       'username': model.username,
+      'profession': model.profession,
       'rate': model.rate,
       'message': model.message,
       'publishedAt': model.publishedAt,

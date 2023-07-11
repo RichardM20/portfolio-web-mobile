@@ -4,7 +4,7 @@ import 'package:personal_portfolio/controllers/testomonials_controller.dart';
 import 'package:personal_portfolio/utils/text_content.dart';
 import 'package:personal_portfolio/utils/typography_style.dart';
 
-import 'add_testimony_button.dart';
+import 'buttons/add_testimony_button.dart';
 import 'carousel_content.dart';
 
 class TestimonialsBody extends StatelessWidget {
@@ -36,9 +36,7 @@ class TestimonialsBody extends StatelessWidget {
             ),
           ),
         ),
-        AddTestimonyButton(
-          isHover: false.obs,
-        ),
+        const AddTestimonyButton(),
         CarouselTestimonialsContent(),
       ],
     );

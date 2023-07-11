@@ -36,9 +36,11 @@ class TestimonialItemData extends StatelessWidget {
                 profession: profession,
               ),
               const Divider(),
-              Text(
-                message,
-                style: paragraphTextStyle,
+              Flexible(
+                child: Text(
+                  message,
+                  style: paragraphTextStyle,
+                ),
               )
             ],
           ),

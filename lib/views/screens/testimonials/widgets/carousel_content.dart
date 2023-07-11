@@ -22,7 +22,7 @@ class CarouselTestimonialsContent extends StatelessWidget {
               ? const EmptyDataContent()
               : GenericCarouselContent(
                   carouselController: _controller.carouselController,
-                  height: 150,
+                  height: 170,
                   listWidgets: List.generate(
                     _controller.testimonialsModel.length,
                     (index) {

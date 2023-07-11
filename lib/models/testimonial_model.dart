@@ -4,8 +4,6 @@
 
 import 'dart:convert';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 TestimonialModel testimonialModelFromJson(String str) =>
     TestimonialModel.fromJson(json.decode(str));
 
@@ -14,7 +12,7 @@ String testimonialModelToJson(TestimonialModel data) =>
 
 class TestimonialModel {
   String? username;
-  int? rate;
+  double? rate;
   DateTime? publishedAt;
   String? message;
   String? profession;
