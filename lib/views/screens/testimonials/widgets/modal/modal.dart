@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/controllers/testomonials_controller.dart';
 
 import 'modal_form_content.dart';
 
@@ -16,5 +17,5 @@ showModal(context) {
     builder: (context) {
       return const ModalBottomFormContent();
     },
-  );
+  ).whenComplete(() => TestimonialsController.to.clears());
 }

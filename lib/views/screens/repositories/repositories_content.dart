@@ -11,6 +11,6 @@ class RepositoriesContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const BlockWrapper(RepositoriesBody());
+    return BlockWrapper(RepositoriesBody());
   }
 }

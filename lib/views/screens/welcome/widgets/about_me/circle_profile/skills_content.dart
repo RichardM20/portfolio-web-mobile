@@ -9,6 +9,7 @@ class CircleSkillsContent extends StatelessWidget {
     super.key,
   });
   final _controller = ProfileAndExperienceSkillsController.to;
+
   @override
   Widget build(BuildContext context) {
     return Obx(

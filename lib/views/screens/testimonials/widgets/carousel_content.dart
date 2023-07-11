@@ -14,32 +14,29 @@ class CarouselTestimonialsContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(
-      () => _controller.loadingData.value
-          ? const Center(
-              child: CircularProgressIndicator(),
-            )
-          : _controller.testimonialsModel.isEmpty
-              ? const EmptyDataContent()
-              : GenericCarouselContent(
-                  carouselController: _controller.carouselController,
-                  height: 170,
-                  listWidgets: List.generate(
-                    _controller.testimonialsModel.length,
-                    (index) {
-                      final data = _controller.testimonialsModel[index];
-                      return TestimonialItemDecoration(
-                        widget: TestimonialItemData(
-                          date: data.publishedAt!,
-                          image: data.profileimage ?? "",
-                          message: data.message ?? "",
-                          profession: data.profession ?? "",
-                          name: data.username ?? "",
-                          rate: double.parse(data.rate.toString()) ?? 0.0,
-                        ),
-                      );
-                    },
-                  ),
-                ),
+      () => _controller.testimonialsModel.isEmpty
+          ? const EmptyDataContent()
+          : GenericCarouselContent(
+              carouselController: _controller.carouselController,
+              height: 170,
+              listWidgets: List.generate(
+                _controller.testimonialsModel.length,
+                (index) {
+                  final data = _controller.testimonialsModel[index];
+                  return TestimonialItemDecoration(
+                    selected: index,
+                    widget: TestimonialItemData(
+                      date: data.publishedAt!,
+                      image: data.profileimage ?? "",
+                      message: data.message ?? "",
+                      profession: data.profession ?? "",
+                      name: data.username ?? "",
+                      rate: double.parse(data.rate.toString()) ?? 0.0,
+                    ),
+                  );
+                },
+              ),
+            ),
     );
   }
 }

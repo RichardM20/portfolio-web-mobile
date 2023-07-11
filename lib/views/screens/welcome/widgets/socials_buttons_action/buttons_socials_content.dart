@@ -27,11 +27,12 @@ class SocialsButtons extends StatefulWidget {
 
 class _SocialsButtonsState extends State<SocialsButtons>
     with SingleTickerProviderStateMixin {
-  final controller = SocialsButtonsActionController.to;
+  final _controller = SocialsButtonsActionController();
+  late AnimationController animationController;
   @override
   void initState() {
     super.initState();
-    controller.animationController = AnimationController(
+    animationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 250),
       upperBound: 0.5,
@@ -41,17 +42,24 @@ class _SocialsButtonsState extends State<SocialsButtons>
   @override
   Widget build(BuildContext context) {
     return Obx(
-      () => MouseRegion(cursor: SystemMouseCursors.click,
+      () => MouseRegion(
+        cursor: SystemMouseCursors.click,
         onEnter: (event) {
           widget.isHover.value = true;
-          controller.animationController.forward(from: 0.0);
+          animationController.forward(from: 0.0);
         },
         onExit: (event) {
           widget.isHover.value = false;
-          controller.animationController.forward(from: 0.5);
+          animationController.forward(from: 0.5);
         },
         child: GestureDetector(
-          onTap: () => html.window.open(widget.url, '_blank'),
+          onTap: () {
+            if (widget.url.isEmpty) {
+              _controller.downloadPdf();
+            } else {
+              html.window.open(widget.url, '_blank');
+            }
+          },
           child: AnimatedContainer(
             margin: const EdgeInsets.only(right: 10),
             duration: const Duration(milliseconds: 250),
@@ -80,7 +88,7 @@ class _SocialsButtonsState extends State<SocialsButtons>
                   Flexible(
                     child: SocialIconContent(
                       iconName: widget.iconName,
-                      animationController: controller.animationController,
+                      animationController: animationController,
                       onHover: widget.isHover,
                     ),
                   ),

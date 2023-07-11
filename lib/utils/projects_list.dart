@@ -1,3 +1,5 @@
+//listado local de los proyectos
+
 List<Map<String, dynamic>> projects = [
   {
     "name": "GoodCommerce App",

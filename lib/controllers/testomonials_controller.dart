@@ -19,6 +19,21 @@ class TestimonialsController extends GetxController {
   final uploadingData = false.obs;
   final formKey = GlobalKey<FormState>();
   //>
+
+  @override
+  void onClose() {
+    TestimonialsController.to.dispose();
+
+    super.onClose();
+  }
+
+  clears() {
+    usernameController.text = "";
+    professionController.text = "";
+    rate.value = 1.0;
+    messageController.text = "";
+  }
+
   @override
   void onInit() {
     loadData();
@@ -38,7 +53,9 @@ class TestimonialsController extends GetxController {
   }
 
   validateForm() {
+    //validacion del formulario
     if (formKey.currentState!.validate()) {
+      //se inicializa la variable para la animacion de carga y saber el estado de la peticion
       uploadingData.value = true;
       formKey.currentState!.save();
       startLoading();
@@ -55,8 +72,12 @@ class TestimonialsController extends GetxController {
   }
 
   Future<void> sendData() async {
+    //metodo para el envio del testimonio
     try {
       await _firebaseService.addTestimonial(
+        //se le pasa el modelo de la clase con los datos del formulario
+        //me dio flonera implemantar la seleccion de imagen, pero si es de tu gusto puedes hacerlo
+        //de momento le pasare un string vacio ya que tocaba hacer mas cosas
         TestimonialModel(
           profileimage: '',
           profession: professionController.text,
@@ -67,8 +88,13 @@ class TestimonialsController extends GetxController {
         ),
       );
       uploadingData.value = false;
+      //regresamos a la pantalla
       Get.back();
+      //al pasar este tiempo mostraremos el mensaje
+      //este timesleep es para esperar a estar en la pantalla y ver bien el mensaje
       await 100.milliseconds.delay();
+      //podria haber reutilizado este metodo del snackbar para el mensaje pero la verdad paso de ello
+      //si es de tu agrado puedes crear su clase reutilizable
       Get.snackbar(
         "Success",
         "Your testimony has been published",

@@ -8,6 +8,6 @@ class WelcomeContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const BlockWrapper(PresentationTopContent());
+    return BlockWrapper(PresentationTopContent());
   }
 }

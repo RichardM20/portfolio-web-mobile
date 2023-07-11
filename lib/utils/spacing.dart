@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+//espacioados para utilizar junto con el paquete de responsive_frame
 // Margin
 const EdgeInsets marginBottom12 = EdgeInsets.only(bottom: 12);
 const EdgeInsets marginBottom24 = EdgeInsets.only(bottom: 24);

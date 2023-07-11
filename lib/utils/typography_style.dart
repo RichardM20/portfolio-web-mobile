@@ -3,6 +3,8 @@ import 'package:personal_portfolio/utils/colors_app.dart';
 
 import 'typography_family.dart';
 
+//estilos de los textos
+//modificar segun gusto o necesidad
 const TextStyle bigPrimaryTitleStyle = TextStyle(
   fontSize: 30,
   fontFamily: semiBold,

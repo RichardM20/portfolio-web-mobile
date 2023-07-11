@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 
 import 'colors_app.dart';
 
+//acciones de los iconos sociales
+//eliminar o agregar segun el gusto
 List socialsIcons = [
   {
     'icon': 'download-icon.svg',
@@ -30,7 +32,7 @@ List socialsIcons = [
     'isHover': false.obs,
     'text': "Contact for Instagram",
     'color': const Color(0xFFE1306C),
-    'url': 'https://instagram.com/rickx18?igshid=NGExMmI2YTkyZg=='
+    'url': 'https://instagram.com/rickxdev?igshid=NGExMmI2YTkyZg=='
   },
   {
     'icon': 'whatsapp-icon.svg',

@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+//lista de acciones del navbar
+//agregar o eliminar seun el gusto
 List navbarActionsList = [
   {
     'name': 'Home',

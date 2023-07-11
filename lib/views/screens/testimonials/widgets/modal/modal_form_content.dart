@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:personal_portfolio/views/screens/testimonials/widgets/buttons/button_save_content.dart';
 import 'package:personal_portfolio/views/screens/testimonials/widgets/form/form_content.dart';
+import 'package:personal_portfolio/views/screens/testimonials/widgets/modal/rating_content.dart';
 
 class ModalBottomFormContent extends StatelessWidget {
   const ModalBottomFormContent({super.key});
@@ -9,6 +10,7 @@ class ModalBottomFormContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(4),
@@ -21,7 +23,11 @@ class ModalBottomFormContent extends StatelessWidget {
             ? const EdgeInsets.symmetric(horizontal: 5, vertical: 5)
             : const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const SizedBox(height: 5),
+            RatingWidget(),
+            const SizedBox(height: 10),
             FormTestimonyContent(),
             const SizedBox(height: 5),
             TestimonySaveButton(),

@@ -15,65 +15,62 @@ class CarouselContent extends StatelessWidget {
   final _contrller = ProjectsController.to;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: GenericCarouselContent(
-        carouselController: _contrller.carouselController,
-        listWidgets: List.generate(
-          _contrller.projectsList.length,
-          (index) => ProjectContentDecoration(
-            widget: Stack(
-              children: [
-                if (_contrller
-                    .projectsList[index].storesLinks!.appstore!.isNotEmpty)
-                  Positioned(
-                    top: 2,
-                    right: 1,
-                    child: StoresIconContent(
-                      appstore:
-                          _contrller.projectsList[index].storesLinks!.appstore!,
-                      playstore: _contrller
-                          .projectsList[index].storesLinks!.playstore!,
-                    ),
+    return GenericCarouselContent(
+      carouselController: _contrller.carouselController,
+      listWidgets: List.generate(
+        _contrller.projectsList.length,
+        (index) => ProjectContentDecoration(
+          widget: Stack(
+            children: [
+              if (_contrller
+                  .projectsList[index].storesLinks!.appstore!.isNotEmpty)
+                Positioned(
+                  top: 2,
+                  right: 1,
+                  child: StoresIconContent(
+                    appstore:
+                        _contrller.projectsList[index].storesLinks!.appstore!,
+                    playstore:
+                        _contrller.projectsList[index].storesLinks!.playstore!,
                   ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    ProjectImagecontent(
-                      asset: _contrller.projectsList[index].images!,
-                    ),
-                    ProjectInfoContent(
-                      nameProject: _contrller.projectsList[index].name!,
-                      infoProject: _contrller.projectsList[index].description!,
-                      technologies:
-                          _contrller.projectsList[index].technologies!,
-                    ),
-                  ],
                 ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: ActionButtonProject(
-                    isHover: false.obs,
-                    textButton: 'View code',
-                    onTap: () {
-                      if (_contrller
-                          .projectsList[index].repositoryLink!.isEmpty) {
-                        return dialog(
-                          context,
-                          info:
-                              "This code is confidential, so it cannot be visible to the general public.",
-                          title: "Information",
-                        );
-                      } else {
-                        html.window.open(
-                          _contrller.projectsList[index].repositoryLink!,
-                          '_blank',
-                        );
-                      }
-                    },
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  ProjectImagecontent(
+                    asset: _contrller.projectsList[index].images!,
                   ),
-                )
-              ],
-            ),
+                  ProjectInfoContent(
+                    nameProject: _contrller.projectsList[index].name!,
+                    infoProject: _contrller.projectsList[index].description!,
+                    technologies: _contrller.projectsList[index].technologies!,
+                  ),
+                ],
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: ActionButtonProject(
+                  isHover: false.obs,
+                  textButton: 'View code',
+                  onTap: () {
+                    if (_contrller
+                        .projectsList[index].repositoryLink!.isEmpty) {
+                      return dialog(
+                        context,
+                        info:
+                            "This code is confidential, so it cannot be visible to the general public.",
+                        title: "Information",
+                      );
+                    } else {
+                      html.window.open(
+                        _contrller.projectsList[index].repositoryLink!,
+                        '_blank',
+                      );
+                    }
+                  },
+                ),
+              )
+            ],
           ),
         ),
       ),

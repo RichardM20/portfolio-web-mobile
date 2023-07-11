@@ -13,6 +13,7 @@ class FirebaseService {
         .snapshots()
         .map((snapshot) {
       return snapshot.docs.map((doc) {
+        //escuchamos los datos y mapeamos al modelo de clase
         return TestimonialModel(
           message: doc['message'],
           profession: doc['profession'],
@@ -25,7 +26,10 @@ class FirebaseService {
     });
   }
 
+  //este es el metodo para agregar los datos a la coleccion
   Future<void> addTestimonial(TestimonialModel model) async {
+    //recuerda que debes colocar aqui el mismo nombre de tu coleccion en caso de que sea diferente
+
     final collectionRef = FirebaseFirestore.instance.collection('testimonials');
     final testimonialData = {
       'profile_image': model.profileimage,
@@ -35,6 +39,7 @@ class FirebaseService {
       'message': model.message,
       'publishedAt': model.publishedAt,
     };
+    //mandamos el modelo
     await collectionRef.add(testimonialData);
   }
 }
