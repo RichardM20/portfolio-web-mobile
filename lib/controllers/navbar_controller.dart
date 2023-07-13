@@ -13,4 +13,8 @@ class NavbarController extends GetxController {
   PageController pageController = PageController(
     initialPage: 0,
   );
+  late ScrollController scrollController;
+  RxDouble welcomeOpacity = 1.0.obs;
+  RxDouble repositoriesOpacity = 1.0.obs;
+  RxDouble testimonialsOpacity = 1.0.obs;
 }

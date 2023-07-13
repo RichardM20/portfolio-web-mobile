@@ -100,7 +100,7 @@ class TestimonialsController extends GetxController {
         "Your testimony has been published",
         barBlur: 1.0,
         animationDuration: const Duration(milliseconds: 250),
-        backgroundColor: primaryColor30,
+        backgroundColor: primaryColor,
         colorText: Colors.white,
         duration: const Duration(seconds: 3),
       );

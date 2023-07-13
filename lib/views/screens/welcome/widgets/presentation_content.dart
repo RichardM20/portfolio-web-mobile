@@ -3,11 +3,11 @@ import 'package:get/get.dart';
 import 'package:personal_portfolio/controllers/profile_and_experience_controller.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import '../socials_icon_list_content.dart';
-import 'about_me.dart';
-import 'name_text_content.dart';
-import 'profession_text_content.dart';
-import 'profile_and_experience.dart';
+import 'socials_icon_list_content.dart';
+import 'about_me/about_me.dart';
+import 'about_me/name_text_content.dart';
+import 'about_me/profession_text_content.dart';
+import 'about_me/profile_and_experience.dart';
 
 class PresentationTopContent extends StatelessWidget {
   PresentationTopContent({super.key});
@@ -17,7 +17,7 @@ class PresentationTopContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Get.height * 0.7,
+      height: Get.width < 800 ? Get.height * 0.75 : Get.height * 0.47,
       width: double.infinity,
       padding: EdgeInsets.symmetric(
         horizontal: MediaQuery.of(context).size.width > 600 ? 50 : 10,

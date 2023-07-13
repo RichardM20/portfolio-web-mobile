@@ -5,16 +5,18 @@ import 'package:personal_portfolio/utils/typography_style.dart';
 
 class GenericInput extends StatelessWidget {
   const GenericInput({
-    super.key,
+    Key? key,
     this.label,
     this.hint,
     this.isMultiline,
     required this.controller,
-  });
+  }) : super(key: key);
+
   final String? label;
   final String? hint;
   final bool? isMultiline;
   final TextEditingController controller;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -22,7 +24,7 @@ class GenericInput extends StatelessWidget {
       controller: controller,
       minLines: isMultiline == true ? 5 : 1,
       maxLines: isMultiline == true ? 10 : 1,
-      maxLength: isMultiline == true ? 300 : 10,
+      maxLength: isMultiline == true ? 300 : 20,
       validator: (value) {
         if (value!.length < 5) {
           return 'Enter a valid ${label!.toLowerCase()}';
@@ -58,6 +60,7 @@ class GenericInput extends StatelessWidget {
           borderSide: BorderSide.none,
           borderRadius: BorderRadius.circular(3),
         ),
+        counterText: '',
       ),
     );
   }

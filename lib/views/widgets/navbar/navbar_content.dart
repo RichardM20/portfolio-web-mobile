@@ -25,14 +25,20 @@ class NavBarContent extends StatelessWidget {
             children: List.generate(
               navbarActionsList.length,
               (index) => ActionButton(
-                isHover: navbarActionsList[index]['isHover'],
-                name: navbarActionsList[index]['name'],
-                onTap: () => _contrller.pageController.animateToPage(
-                  index,
-                  duration: const Duration(milliseconds: 250),
-                  curve: Curves.easeIn,
-                ),
-              ),
+                  isHover: navbarActionsList[index]['isHover'],
+                  name: navbarActionsList[index]['name'],
+                  onTap: () {
+                    switch (index) {
+                      case 0:
+                        return _contrller.scrollController.jumpTo(0.0);
+                      case 1:
+                        return _contrller.scrollController.jumpTo(300.0);
+                      case 2:
+                        return _contrller.scrollController.jumpTo(800.0);
+                      default:
+                        return _contrller.scrollController.jumpTo(0.0);
+                    }
+                  }),
             ),
           )
         ],

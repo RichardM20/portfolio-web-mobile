@@ -11,6 +11,7 @@ class RepositoriesBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      height: Get.height * 0.5,
       child: Obx(
         () => _contrller.loading.value
             ? Center(

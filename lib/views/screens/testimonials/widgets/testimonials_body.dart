@@ -14,25 +14,28 @@ class TestimonialsBody extends StatelessWidget {
   final _controller = TestimonialsController.to;
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => _controller.loadingData.value
-          ? Center(
-              child: CircularProgressIndicator(
-                color: primaryColor,
-                backgroundColor: primaryColor30,
-              ),
-            )
-          : Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const GenericSectionTitle(
-                  title: "Testimonials",
+    return SizedBox(
+      height: Get.width < 800 ? Get.height * 0.60 : Get.height * 0.53,
+      child: Obx(
+        () => _controller.loadingData.value
+            ? Center(
+                child: CircularProgressIndicator(
+                  color: primaryColor,
+                  backgroundColor: primaryColor30,
                 ),
-                const ExperienceTestimonyText(),
-                const AddTestimonyButton(),
-                CarouselTestimonialsContent(),
-              ],
-            ),
+              )
+            : Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const GenericSectionTitle(
+                    title: "Testimonials",
+                  ),
+                  const ExperienceTestimonyText(),
+                  const AddTestimonyButton(),
+                  CarouselTestimonialsContent(),
+                ],
+              ),
+      ),
     );
   }
 }

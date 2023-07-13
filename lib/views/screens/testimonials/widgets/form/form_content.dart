@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:personal_portfolio/controllers/testomonials_controller.dart';
 import 'package:personal_portfolio/views/screens/testimonials/widgets/input/generic_input.dart';
 
@@ -11,18 +12,29 @@ class FormTestimonyContent extends StatelessWidget {
       key: _controller.formKey,
       child: Column(
         children: [
-          GenericInput(
-            controller: _controller.usernameController,
-            hint: 'Enter your name',
-            isMultiline: false,
-            label: 'Name',
-          ),
-          const SizedBox(height: 5),
-          GenericInput(
-            controller: _controller.professionController,
-            hint: 'Enter your profession',
-            isMultiline: false,
-            label: 'Profession',
+          SizedBox(
+            width: Get.width,
+            child: Row(
+              children: [
+                Expanded(
+                  child: GenericInput(
+                    controller: _controller.usernameController,
+                    hint: 'Enter your name',
+                    isMultiline: false,
+                    label: 'Name',
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: GenericInput(
+                    controller: _controller.professionController,
+                    hint: 'Enter your profession',
+                    isMultiline: false,
+                    label: 'Profession',
+                  ),
+                ),
+              ],
+            ),
           ),
           const SizedBox(height: 5),
           GenericInput(

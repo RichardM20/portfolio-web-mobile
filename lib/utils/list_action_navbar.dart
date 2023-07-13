@@ -15,8 +15,8 @@ List navbarActionsList = [
     'name': 'Testimonials',
     'isHover': false.obs,
   },
-  {
-    'name': 'About me',
-    'isHover': false.obs,
-  },
+  // {
+  //   'name': 'About me',
+  //   'isHover': false.obs,
+  // },
 ];

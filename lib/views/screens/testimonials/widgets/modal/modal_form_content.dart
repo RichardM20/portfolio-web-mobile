@@ -26,7 +26,7 @@ class ModalBottomFormContent extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 5),
-            RatingWidget(),
+            const RatingWidget(),
             const SizedBox(height: 10),
             FormTestimonyContent(),
             const SizedBox(height: 5),
