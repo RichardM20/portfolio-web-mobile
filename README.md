@@ -1,6 +1,6 @@
 # Web personal portfolio
 
-El proyecto se maneja con el gestor de estados getx y mvc architecture.
+El proyecto se maneja con el gestor de estados getx y mvc architecture aplicando la metodologia atomic design
 La mayoria de datos se usan localmente, pueden hacerse mediante una conexion si es de la preferencia de quien haga uso de este,
 ya seria cuestion de gustos y ajustar el modelo y llamado de datos segun la necesidad.
 
