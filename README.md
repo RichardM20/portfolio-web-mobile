@@ -1,13 +1,13 @@
 # Web personal portfolio
 
-El proyecto se maneja con el gestor de estados getx y mvc architecture aplicando la metodologia atomic design
+El proyecto se maneja con el gestor de estados getx y mvc architecture aplicando la metodologia atomic design.
 La mayoria de datos se usan localmente, pueden hacerse mediante una conexion si es de la preferencia de quien haga uso de este,
 ya seria cuestion de gustos y ajustar el modelo y llamado de datos segun la necesidad.
 
 
 ## Contenido
 
-- Sobre mi y conatcto (Aqui quise cambiar un poco en el como suelen mostrarse algunos portafolios que ya he visto, la informacion del desarrollador sera mostrada en la primera parte, junto con botones inferiores para el contacto de este)
+- Sobre mi y conatcto: Aqui quise cambiar un poco en el como suelen mostrarse algunos portafolios que ya he visto, la informacion del desarrollador sera mostrada en la primera parte junto con botones inferiores para el contacto de este.
 - Repositorios: Se muestra un carrusel infinito del listado de los pryectos para que en caso de que se tengan pocos no se vea tan pobre, como mencione antes, es custion de gustos pueden ajustarlo de la manera que mejor se acomode a sus preferencias.
 - Testimonios: Igualmente se muestra un carrusel para el listado de estos junto con un boton que le permite a la persona subir su testimonio, podria haberse hecho una autencicacion para poder subir el testimonio pero pues, de cualquier manera cualquier persona que entre y lo vea podra subir cualquier ocurrencia, entonces mejor lo deje asi.
 ### Fin
